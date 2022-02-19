@@ -14,7 +14,7 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 require('dotenv').config();
 // Jubin
-const privateKeys = [process.env.PRIVATE_KEY4, process.env.PRIVATE_KEY5, process.env.PRIVATE_KEY3];
+const privateKeys = [process.env.PRIVATE_KEY3, process.env.PRIVATE_KEY4, process.env.PRIVATE_KEY5];
 
 // Serge
 // const privateKeys = ['1ac9ad9dbcfc704ce14e49824d8bfb845cf22e13e5271e2aea45629639ce29e3', '13f7bb9ea9054234f445553206d391da43bdef7ad4e03a4b416645e8b0d687de'];

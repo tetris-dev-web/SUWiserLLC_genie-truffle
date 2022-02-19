@@ -116,14 +116,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516020806106ba83398101806040528101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506105f6806100c46000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820aa2fbed51d920e28d9fb36095dd45fbabcd40c601bddb907fbb99e58db014e080029",
-  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820aa2fbed51d920e28d9fb36095dd45fbabcd40c601bddb907fbb99e58db014e080029",
-  "sourceMap": "121:277:12:-;;;202:88;8:9:-1;5:2;;;30:1;27;20:12;5:2;202:88:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;583:10:33;575:5;;:18;;;;;;;;;;;;;;;;;;270:15:12;253:14;;:32;;;;;;;;;;;;;;;;;;202:88;121:277;;;;;;",
-  "deployedSourceMap": "121:277:12:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1084:111:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1084:111:33;;;;;;246:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;246:20:33;;;;;;;;;;;;;;;;;;;;;;;;;;;749:72;;8:9:-1;5:2;;;30:1;27;20:12;5:2;749:72:33;;;;;;;;;;;;;;;;;;;;;;;;;;;294:102:12;;8:9:-1;5:2;;;30:1;27;20:12;5:2;294:102:12;;;;;;168:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;168:29:12;;;;;;;;;;;;;;;;;;;;;;;;;;;1375:118:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1375:118:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;1084:111;727:5;;;;;;;;;;;713:19;;:10;:19;;;705:28;;;;;;;;1160:5;;;;;;;;;;;1141:25;;;;;;;;;;;;1188:1;1172:5;;:18;;;;;;;;;;;;;;;;;;1084:111::o;246:20::-;;;;;;;;;;;;;:::o;749:72::-;789:7;811:5;;;;;;;;;;;804:12;;749:72;:::o;294:102:12:-;349:5;;;;;;;;;;;336:39;;;376:14;;;;;;;;;;;336:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;336:55:12;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;336:55:12;;;;294:102::o;168:29::-;;;;;;;;;;;;;:::o;1375:118:33:-;727:5;;;;;;;;;;;713:19;;:10;:19;;;705:28;;;;;;;;1452:1;1444:5;:9;;;;1459:29;1478:9;1459:18;:29::i;:::-;1375:118;:::o;1628:171::-;1719:1;1698:23;;:9;:23;;;;1690:32;;;;;;;;1761:9;1733:38;;1754:5;;;;;;;;;;;1733:38;;;;;;;;;;;;1785:9;1777:5;;:17;;;;;;;;;;;;;;;;;;1628:171;:::o",
-  "source": "pragma solidity >=0.4.22 <0.6.0;\nimport './Amendment.sol';\nimport './utility/Ownable.sol';\nimport './Cooperative0.sol';\n\ncontract NewCooperativeProposal is Ownable {\n  address public newCooperative;\n\n  constructor (address _newCooperative) public {\n    newCooperative = _newCooperative;\n  }\n\n  function executeAmendment () public {\n    Cooperative0(owner).adoptNewCooperative(newCooperative);\n  }\n}\n",
-  "sourcePath": "D:\\Projects\\SUWiserLLC\\serge\\contracts\\NewCooperativeProposal.sol",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806106ba83398101806040528101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506105f6806100c46000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058206e31e3524aa108a6f1f89ee6cd9733fa5067848b6f8119a47316e165ca83336b0029",
+  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058206e31e3524aa108a6f1f89ee6cd9733fa5067848b6f8119a47316e165ca83336b0029",
+  "sourceMap": "126:287:12:-;;;210:90;8:9:-1;5:2;;;30:1;27;20:12;5:2;210:90:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;607:10:33;599:5;;:18;;;;;;;;;;;;;;;;;;279:15:12;262:14;;:32;;;;;;;;;;;;;;;;;;210:90;126:287;;;;;;",
+  "deployedSourceMap": "126:287:12:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:114:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1128:114:33;;;;;;255:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;255:20:33;;;;;;;;;;;;;;;;;;;;;;;;;;;784:74;;8:9:-1;5:2;;;30:1;27;20:12;5:2;784:74:33;;;;;;;;;;;;;;;;;;;;;;;;;;;306:104:12;;8:9:-1;5:2;;;30:1;27;20:12;5:2;306:104:12;;;;;;174:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;174:29:12;;;;;;;;;;;;;;;;;;;;;;;;;;;1430:121:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1430:121:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:114;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1205:5;;;;;;;;;;;1186:25;;;;;;;;;;;;1234:1;1218:5;;:18;;;;;;;;;;;;;;;;;;1128:114::o;255:20::-;;;;;;;;;;;;;:::o;784:74::-;824:7;847:5;;;;;;;;;;;840:12;;784:74;:::o;306:104:12:-;362:5;;;;;;;;;;;349:39;;;389:14;;;;;;;;;;;349:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;349:55:12;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;349:55:12;;;;306:104::o;174:29::-;;;;;;;;;;;;;:::o;1430:121:33:-;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1508:1;1500:5;:9;;;;1516:29;1535:9;1516:18;:29::i;:::-;1430:121;:::o;1692:175::-;1784:1;1763:23;;:9;:23;;;;1755:32;;;;;;;;1827:9;1799:38;;1820:5;;;;;;;;;;;1799:38;;;;;;;;;;;;1852:9;1844:5;;:17;;;;;;;;;;;;;;;;;;1692:175;:::o",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\r\nimport './Amendment.sol';\r\nimport './utility/Ownable.sol';\r\nimport './Cooperative0.sol';\r\n\r\ncontract NewCooperativeProposal is Ownable {\r\n  address public newCooperative;\r\n\r\n  constructor (address _newCooperative) public {\r\n    newCooperative = _newCooperative;\r\n  }\r\n\r\n  function executeAmendment () public {\r\n    Cooperative0(owner).adoptNewCooperative(newCooperative);\r\n  }\r\n}\r\n",
+  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\NewCooperativeProposal.sol",
   "ast": {
-    "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/NewCooperativeProposal.sol",
+    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/NewCooperativeProposal.sol",
     "exportedSymbols": {
       "NewCooperativeProposal": [
         1739
@@ -147,35 +147,35 @@
         "src": "0:32:12"
       },
       {
-        "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/Amendment.sol",
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/Amendment.sol",
         "file": "./Amendment.sol",
         "id": 1711,
         "nodeType": "ImportDirective",
         "scope": 1740,
         "sourceUnit": 128,
-        "src": "33:25:12",
+        "src": "34:25:12",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/utility/Ownable.sol",
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/Ownable.sol",
         "file": "./utility/Ownable.sol",
         "id": 1712,
         "nodeType": "ImportDirective",
         "scope": 1740,
         "sourceUnit": 6311,
-        "src": "59:31:12",
+        "src": "61:31:12",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/Cooperative0.sol",
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/Cooperative0.sol",
         "file": "./Cooperative0.sol",
         "id": 1713,
         "nodeType": "ImportDirective",
         "scope": 1740,
         "sourceUnit": 1386,
-        "src": "91:28:12",
+        "src": "94:28:12",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -189,7 +189,7 @@
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 6310,
-              "src": "156:7:12",
+              "src": "161:7:12",
               "typeDescriptions": {
                 "typeIdentifier": "t_contract$_Ownable_$6310",
                 "typeString": "contract Ownable"
@@ -197,7 +197,7 @@
             },
             "id": 1715,
             "nodeType": "InheritanceSpecifier",
-            "src": "156:7:12"
+            "src": "161:7:12"
           }
         ],
         "contractDependencies": [
@@ -220,7 +220,7 @@
             "name": "newCooperative",
             "nodeType": "VariableDeclaration",
             "scope": 1739,
-            "src": "168:29:12",
+            "src": "174:29:12",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -231,7 +231,7 @@
               "id": 1716,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "168:7:12",
+              "src": "174:7:12",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -244,7 +244,7 @@
             "body": {
               "id": 1726,
               "nodeType": "Block",
-              "src": "247:43:12",
+              "src": "255:45:12",
               "statements": [
                 {
                   "expression": {
@@ -261,7 +261,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1717,
-                      "src": "253:14:12",
+                      "src": "262:14:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -276,13 +276,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1719,
-                      "src": "270:15:12",
+                      "src": "279:15:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "253:32:12",
+                    "src": "262:32:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -290,7 +290,7 @@
                   },
                   "id": 1725,
                   "nodeType": "ExpressionStatement",
-                  "src": "253:32:12"
+                  "src": "262:32:12"
                 }
               ]
             },
@@ -312,7 +312,7 @@
                   "name": "_newCooperative",
                   "nodeType": "VariableDeclaration",
                   "scope": 1727,
-                  "src": "215:23:12",
+                  "src": "223:23:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -323,7 +323,7 @@
                     "id": 1718,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "215:7:12",
+                    "src": "223:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -333,17 +333,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "214:25:12"
+              "src": "222:25:12"
             },
             "payable": false,
             "returnParameters": {
               "id": 1721,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "247:0:12"
+              "src": "255:0:12"
             },
             "scope": 1739,
-            "src": "202:88:12",
+            "src": "210:90:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -352,7 +352,7 @@
             "body": {
               "id": 1737,
               "nodeType": "Block",
-              "src": "330:66:12",
+              "src": "342:68:12",
               "statements": [
                 {
                   "expression": {
@@ -365,7 +365,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 1717,
-                        "src": "376:14:12",
+                        "src": "389:14:12",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -389,7 +389,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 6214,
-                            "src": "349:5:12",
+                            "src": "362:5:12",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -408,7 +408,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 1385,
-                          "src": "336:12:12",
+                          "src": "349:12:12",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_contract$_Cooperative0_$1385_$",
                             "typeString": "type(contract Cooperative0)"
@@ -422,7 +422,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "336:19:12",
+                        "src": "349:19:12",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Cooperative0_$1385",
                           "typeString": "contract Cooperative0"
@@ -436,7 +436,7 @@
                       "memberName": "adoptNewCooperative",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 1119,
-                      "src": "336:39:12",
+                      "src": "349:39:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
@@ -450,7 +450,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "336:55:12",
+                    "src": "349:55:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -458,7 +458,7 @@
                   },
                   "id": 1736,
                   "nodeType": "ExpressionStatement",
-                  "src": "336:55:12"
+                  "src": "349:55:12"
                 }
               ]
             },
@@ -474,30 +474,30 @@
               "id": 1728,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "320:2:12"
+              "src": "332:2:12"
             },
             "payable": false,
             "returnParameters": {
               "id": 1729,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "330:0:12"
+              "src": "342:0:12"
             },
             "scope": 1739,
-            "src": "294:102:12",
+            "src": "306:104:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 1740,
-        "src": "121:277:12"
+        "src": "126:287:12"
       }
     ],
-    "src": "0:399:12"
+    "src": "0:415:12"
   },
   "legacyAST": {
-    "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/NewCooperativeProposal.sol",
+    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/NewCooperativeProposal.sol",
     "exportedSymbols": {
       "NewCooperativeProposal": [
         1739
@@ -521,35 +521,35 @@
         "src": "0:32:12"
       },
       {
-        "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/Amendment.sol",
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/Amendment.sol",
         "file": "./Amendment.sol",
         "id": 1711,
         "nodeType": "ImportDirective",
         "scope": 1740,
         "sourceUnit": 128,
-        "src": "33:25:12",
+        "src": "34:25:12",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/utility/Ownable.sol",
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/Ownable.sol",
         "file": "./utility/Ownable.sol",
         "id": 1712,
         "nodeType": "ImportDirective",
         "scope": 1740,
         "sourceUnit": 6311,
-        "src": "59:31:12",
+        "src": "61:31:12",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/Projects/SUWiserLLC/serge/contracts/Cooperative0.sol",
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/Cooperative0.sol",
         "file": "./Cooperative0.sol",
         "id": 1713,
         "nodeType": "ImportDirective",
         "scope": 1740,
         "sourceUnit": 1386,
-        "src": "91:28:12",
+        "src": "94:28:12",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -563,7 +563,7 @@
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 6310,
-              "src": "156:7:12",
+              "src": "161:7:12",
               "typeDescriptions": {
                 "typeIdentifier": "t_contract$_Ownable_$6310",
                 "typeString": "contract Ownable"
@@ -571,7 +571,7 @@
             },
             "id": 1715,
             "nodeType": "InheritanceSpecifier",
-            "src": "156:7:12"
+            "src": "161:7:12"
           }
         ],
         "contractDependencies": [
@@ -594,7 +594,7 @@
             "name": "newCooperative",
             "nodeType": "VariableDeclaration",
             "scope": 1739,
-            "src": "168:29:12",
+            "src": "174:29:12",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -605,7 +605,7 @@
               "id": 1716,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "168:7:12",
+              "src": "174:7:12",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -618,7 +618,7 @@
             "body": {
               "id": 1726,
               "nodeType": "Block",
-              "src": "247:43:12",
+              "src": "255:45:12",
               "statements": [
                 {
                   "expression": {
@@ -635,7 +635,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1717,
-                      "src": "253:14:12",
+                      "src": "262:14:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -650,13 +650,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1719,
-                      "src": "270:15:12",
+                      "src": "279:15:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "253:32:12",
+                    "src": "262:32:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -664,7 +664,7 @@
                   },
                   "id": 1725,
                   "nodeType": "ExpressionStatement",
-                  "src": "253:32:12"
+                  "src": "262:32:12"
                 }
               ]
             },
@@ -686,7 +686,7 @@
                   "name": "_newCooperative",
                   "nodeType": "VariableDeclaration",
                   "scope": 1727,
-                  "src": "215:23:12",
+                  "src": "223:23:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -697,7 +697,7 @@
                     "id": 1718,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "215:7:12",
+                    "src": "223:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -707,17 +707,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "214:25:12"
+              "src": "222:25:12"
             },
             "payable": false,
             "returnParameters": {
               "id": 1721,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "247:0:12"
+              "src": "255:0:12"
             },
             "scope": 1739,
-            "src": "202:88:12",
+            "src": "210:90:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -726,7 +726,7 @@
             "body": {
               "id": 1737,
               "nodeType": "Block",
-              "src": "330:66:12",
+              "src": "342:68:12",
               "statements": [
                 {
                   "expression": {
@@ -739,7 +739,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 1717,
-                        "src": "376:14:12",
+                        "src": "389:14:12",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -763,7 +763,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 6214,
-                            "src": "349:5:12",
+                            "src": "362:5:12",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -782,7 +782,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 1385,
-                          "src": "336:12:12",
+                          "src": "349:12:12",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_contract$_Cooperative0_$1385_$",
                             "typeString": "type(contract Cooperative0)"
@@ -796,7 +796,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "336:19:12",
+                        "src": "349:19:12",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Cooperative0_$1385",
                           "typeString": "contract Cooperative0"
@@ -810,7 +810,7 @@
                       "memberName": "adoptNewCooperative",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 1119,
-                      "src": "336:39:12",
+                      "src": "349:39:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
@@ -824,7 +824,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "336:55:12",
+                    "src": "349:55:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -832,7 +832,7 @@
                   },
                   "id": 1736,
                   "nodeType": "ExpressionStatement",
-                  "src": "336:55:12"
+                  "src": "349:55:12"
                 }
               ]
             },
@@ -848,27 +848,27 @@
               "id": 1728,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "320:2:12"
+              "src": "332:2:12"
             },
             "payable": false,
             "returnParameters": {
               "id": 1729,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "330:0:12"
+              "src": "342:0:12"
             },
             "scope": 1739,
-            "src": "294:102:12",
+            "src": "306:104:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 1740,
-        "src": "121:277:12"
+        "src": "126:287:12"
       }
     ],
-    "src": "0:399:12"
+    "src": "0:415:12"
   },
   "compiler": {
     "name": "solc",
@@ -876,5 +876,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-19T17:44:11.874Z"
+  "updatedAt": "2022-02-19T19:06:38.124Z"
 }

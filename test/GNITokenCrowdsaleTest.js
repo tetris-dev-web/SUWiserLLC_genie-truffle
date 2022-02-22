@@ -1,10 +1,10 @@
-const GNITokenCrowdsaleMock = artifacts.require('GNITokenCrowdsaleMock');
-const VotingTokenStub = artifacts.require('VotingTokenStub');
-const ActiveTokenStub = artifacts.require('ActiveTokenStub');
-const InactiveTokenStub = artifacts.require('InactiveTokenStub');
-const ProjectLeaderTrackerStub = artifacts.require('ProjectLeaderTrackerStub');
-const TokenPurchaseHelperStub = artifacts.require('TokenPurchaseHelperStub');
-const ReimbursementsStub = artifacts.require('ReimbursementsStub');
+const GNITokenCrowdsaleMock = artifacts.require("GNITokenCrowdsaleMock");
+const VotingTokenStub = artifacts.require("VotingTokenStub");
+const ActiveTokenStub = artifacts.require("ActiveTokenStub");
+const InactiveTokenStub = artifacts.require("InactiveTokenStub");
+const ProjectLeaderTrackerStub = artifacts.require("ProjectLeaderTrackerStub");
+const TokenPurchaseHelperStub = artifacts.require("TokenPurchaseHelperStub");
+const ReimbursementsStub = artifacts.require("ReimbursementsStub");
 const BigNumber = require('bignumber.js');
 const exceptions = require('./exceptions');
 const stubUtil = require('./stubUtil');
@@ -28,7 +28,7 @@ contract('GNITokenCrowdsale', async (_accounts) => {
 
   before(async () => {
     await setUp();
-  });
+  })
 
   // describe('pitchProject', async () => {
   //   let voteHash;
@@ -136,70 +136,58 @@ contract('GNITokenCrowdsale', async (_accounts) => {
   //   })
   // })
 
-  describe('mintNewProjectTokensAndExtendDoomsDay', async () => {
-    describe('when the crowdsale is open', async () => {
+  describe("mintNewProjectTokensAndExtendDoomsDay", async () => {
+    describe("when the crowdsale is open", async () => {
       let mintCallData;
       let returnValue;
       before(async () => {
-        await stubUtil.addMethod(inactiveToken, 'mint');
-        await stubUtil.addMethod(inactiveToken, 'mint');
+        await stubUtil.addMethod(inactiveToken, "mint");
+        await stubUtil.addMethod(inactiveToken, "mint");
         returnValue = await mockGTC.mintNewProjectTokensAndExtendDoomsDay.call(5000000, 3000000);
         await mockGTC.mintNewProjectTokensAndExtendDoomsDay(5000000, 3000000);
         mintCallData = await stubUtil.callHistory(inactiveToken, 'mint');
-      });
+      })
 
       it('mints developer tokens to the developer as a function of (rate * (valuation - capitalRequired))', async () => {
-        let { firstAddress, firstUint } = mintCallData;
-        assert.equal(firstAddress, accounts[0], 'developer tokens not minted to contract');
-        assert.equal(firstUint, 2000000, 'incorrect number of developer tokens minted');
-      });
+         let { firstAddress, firstUint } = mintCallData;
+         assert.equal(firstAddress, accounts[0], 'developer tokens not minted to contract');
+         assert.equal(firstUint, 2000000, 'incorrect number of developer tokens minted');
+      })
 
-      it('mints investor tokens to the contract as a function of (rate * capitalRequired)', async () => {
-        let { secondAddress, secondUint } = mintCallData;
-        assert.equal(secondAddress, mockGTC.address, 'investor tokens not minted to contract');
-        assert.equal(secondUint, 3000000, 'incorrect number of investor tokens minted');
-      });
+       it('mints investor tokens to the contract as a function of (rate * capitalRequired)', async () => {
+         let { secondAddress, secondUint } = mintCallData;
+         assert.equal(secondAddress, mockGTC.address, 'investor tokens not minted to contract');
+         assert.equal(secondUint, 3000000, 'incorrect number of investor tokens minted');
+       })
 
-      it('extends the doomsDay by 90 days from the current time', async () => {
-        let finalDoomsDay = await parseMethod(getDoomsDay);
-        let now = await getLatestBlockTime();
-        assert.equal(finalDoomsDay, now + 90 * 1728000, 'doomsDay not extended properly');
-      });
+       it('extends the doomsDay by 90 days from the current time', async () => {
+         let finalDoomsDay = await parseMethod(getDoomsDay);
+         let now = await getLatestBlockTime();
+         assert.equal(finalDoomsDay, now + (90 * 1728000), 'doomsDay not extended properly');
+       })
 
-      it('returns the number of tokens minted', async () => {
-        assert.equal(
-          parseBN(returnValue[0]),
-          2000000,
-          'should return the number of developer tokens minted',
-        );
-        assert.equal(
-          parseBN(returnValue[1]),
-          3000000,
-          'should return the number of investor tokens minted',
-        );
-      });
-    });
-    describe('when the crowdsale is not open', async () => {
+       it("returns the number of tokens minted", async () => {
+         assert.equal(parseBN(returnValue[0]), 2000000, "should return the number of developer tokens minted");
+         assert.equal(parseBN(returnValue[1]), 3000000, "should return the number of investor tokens minted");
+       })
+    })
+    describe("when the crowdsale is not open", async () => {
       after(async () => {
         await mockGTC.setMockDoomsDay(defaultDoomsDay);
-      });
+      })
 
       it('reverts when the crowdsale has not opened yet', async () => {
         await mockGTC.setMockOpening(defaultOpeningTime * 400);
-        await exceptions.catchRevert(
-          mockGTC.mintNewProjectTokensAndExtendDoomsDay(5000000, 3000000),
-        );
-      });
+        await exceptions.catchRevert(mockGTC.mintNewProjectTokensAndExtendDoomsDay(5000000, 3000000));
+      })
 
       it('reverts after the crowdsale has closed', async () => {
         await mockGTC.setMockOpening(defaultOpeningTime);
         await mockGTC.setMockDoomsDay(defaultDoomsDay / 2);
-        await exceptions.catchRevert(
-          mockGTC.mintNewProjectTokensAndExtendDoomsDay(5000000, 3000000),
-        );
-      });
-    });
-  });
+        await exceptions.catchRevert(mockGTC.mintNewProjectTokensAndExtendDoomsDay(5000000, 3000000));
+      })
+    })
+  })
 
   describe('buyTokens', async () => {
     describe('when the crowdsale is open', async () => {
@@ -211,37 +199,31 @@ contract('GNITokenCrowdsale', async (_accounts) => {
         initialDoomsDay = await parseMethod(getDoomsDay);
         await stubUtil.addMethod(inactiveToken, 'transfer');
         await stubUtil.addMethod(tokenPurchaseHelper, 'handleTokenPurchase');
-        await mockGTC.buyTokens({ from: accounts[2], value: 500000 });
-      });
+        await mockGTC.buyTokens({from: accounts[2], value: 500000});
+      })
 
       after(async () => {
         await stubUtil.resetMethod(inactiveToken, 'transfer');
         await stubUtil.resetMethod(tokenPurchaseHelper, 'handleTokenPurchase');
-      });
+      })
+
 
       it('transfers inactive tokens from the contract to the beneficiary as a function of value * rate', async () => {
         let { firstAddress, firstUint } = await stubUtil.callHistory(inactiveToken, 'transfer');
         assert.equal(firstAddress, accounts[2], 'tokens not transfered to the correct beneficiary');
         assert.equal(firstUint, 500000, 'incorrect token amount transfered');
-      });
+      })
 
       it('handles the token purchase', async () => {
-        let { firstAddress, firstUint } = await stubUtil.callHistory(
-          tokenPurchaseHelper,
-          'handleTokenPurchase',
-        );
-        assert.equal(firstAddress, accounts[2], 'should handle the token purchase');
-        assert.equal(firstUint, 500000, 'should handle the token purchase');
-      });
+        let { firstAddress, firstUint } = await stubUtil.callHistory(tokenPurchaseHelper, 'handleTokenPurchase');
+        assert.equal(firstAddress, accounts[2], "should handle the token purchase");
+        assert.equal(firstUint, 500000, "should handle the token purchase");
+      })
 
       it('increases weiRaised by the purchase value', async () => {
         let finalWeiRaised = await parseMethod(getWeiRaised);
-        assert.equal(
-          finalWeiRaised,
-          initialWeiRaised + 500000,
-          'purchase value not added to weiRaised',
-        );
-      });
+        assert.equal(finalWeiRaised, initialWeiRaised + 500000, 'purchase value not added to weiRaised');
+      })
 
       // it('votes for the project indicated', async () => {
       //   let { firstAddress, firstUint } = await stubUtil.callHistory(projStub1, 'vote');
@@ -252,10 +234,10 @@ contract('GNITokenCrowdsale', async (_accounts) => {
       it('extends the doomsDay by 90 days from the current time', async () => {
         let finalDoomsDay = await parseMethod(getDoomsDay);
         let now = await getLatestBlockTime();
-        assert.equal(finalDoomsDay, now + 90 * 1728000, 'doomsDay not extended properly');
-      });
+        assert.equal(finalDoomsDay, now + (90 * 1728000), 'doomsDay not extended properly');
+      })
 
-      //these should be for voting
+    //these should be for voting
       // it('considers the voted for project for leadership', async () => {
       //   let { firstUint } = await stubUtil.callHistory(mockGTC, 'trackProject');
       //   assert.equal(firstUint, 0, 'voted for project should be considered for leadership');
@@ -265,135 +247,129 @@ contract('GNITokenCrowdsale', async (_accounts) => {
       //   let { called } = await stubUtil.callHistory(mockGTC, 'attemptProjectActivation');
       //   assert.equal(called, true, 'project activation should be attempted');
       // })
-    });
+    })
 
     describe('when the crowdsale is not open', async () => {
       after(async () => {
         await mockGTC.setMockDoomsDay(defaultDoomsDay);
-      });
+      })
 
       it('reverts when the crowdsale has not opened yet', async () => {
         await mockGTC.setMockOpening(defaultOpeningTime * 400);
-        await exceptions.catchRevert(mockGTC.buyTokens({ from: accounts[2], value: 500000 }));
-      });
+        await exceptions.catchRevert(mockGTC.buyTokens({from: accounts[2], value: 500000}));
+      })
 
       it('reverts after the crowdsale has closed', async () => {
         await mockGTC.setMockOpening(defaultOpeningTime);
         await mockGTC.setMockDoomsDay(defaultDoomsDay / 2);
-        await exceptions.catchRevert(mockGTC.buyTokens({ from: accounts[2], value: 500000 }));
-      });
-    });
-  });
+        await exceptions.catchRevert(mockGTC.buyTokens({from: accounts[2], value: 500000}));
+      })
+    })
+  })
 
-  describe('transferCapitalToDeveloper', async () => {
-    describe('when the sender has access', async () => {
-      describe('when there is enough weiRaised', async () => {
+  describe("transferCapitalToDeveloper", async () => {
+    describe("when the sender has access", async () => {
+      describe("when there is enough weiRaised", async () => {
         let initialDeveloperWei;
         before(async () => {
           const addr = mockGTC.address;
-          await web3.eth.sendTransaction({ from: accounts[1], to: addr, value: 7000000 });
+          await web3.eth.sendTransaction({from: accounts[1], to: addr, value: 7000000});
           await mockGTC.setMockWeiRaised(8000000);
           const developerWei = await weiBalanceOf(accounts[0]);
           initialDeveloperWei = new BigNumber(developerWei.toString());
-          await mockGTC.transferCapitalToDeveloper(7000000, { from: accounts[2] });
-        });
+          await mockGTC.transferCapitalToDeveloper(7000000, {from: accounts[2]});
+        })
 
-        it('transfers the capital to the developer', async () => {
+        it("transfers the capital to the developer", async () => {
           let developerWei = await weiBalanceOf(accounts[0]);
           let finalDeveloperWei = new BigNumber(developerWei.toString());
           let expected = initialDeveloperWei.plus('7000000').decimalPlaces(0);
-          assert(
-            finalDeveloperWei.isEqualTo(expected),
-            'capital required should be forwarded to the developer',
-          );
-        });
+          assert(finalDeveloperWei.isEqualTo(expected), 'capital required should be forwarded to the developer');
+        })
 
         it('decreases weiRaised by the capital required', async () => {
           let afterWei = await parseMethod(getWeiRaised);
           assert.equal(afterWei, 1000000, 'weiRaised not reduced by capitalRequired');
-        });
-      });
-      describe('when there is not enough weiRaised', async () => {
+        })
+      })
+      describe("when there is not enough weiRaised", async () => {
         before(async () => {
           const addr = mockGTC.address;
-          await web3.eth.sendTransaction({ from: accounts[1], to: addr, value: 7000000 });
+          await web3.eth.sendTransaction({from: accounts[1], to: addr, value: 7000000});
           await mockGTC.setMockWeiRaised(6000000);
-        });
+        })
 
         after(async () => {
           await mockGTC.setMockWeiRaised(8000000);
-        });
-        it('reverts', async () => {
-          await exceptions.catchRevert(
-            mockGTC.transferCapitalToDeveloper(7000000, { from: accounts[2] }),
-          );
-        });
-      });
-      describe('when the sender does not have access', async () => {
-        it('reverts', async () => {
-          await exceptions.catchRevert(
-            mockGTC.transferCapitalToDeveloper(7000000, { from: accounts[0] }),
-          );
-        });
-      });
-    });
-  });
+        })
+        it("reverts", async () => {
+          await exceptions.catchRevert(mockGTC.transferCapitalToDeveloper(7000000, {from: accounts[2]}))
+        })
+      })
+      describe("when the sender does not have access", async () => {
+        it("reverts", async () => {
+          await exceptions.catchRevert(mockGTC.transferCapitalToDeveloper(7000000, {from: accounts[0]}))
+        })
+      })
+    })
+  })
 
   describe('reimburseFunds', async () => {
     describe('when the crowdsale has closed', async () => {
       before(async () => {
         await mockGTC.setMockDoomsDay(0);
         const addr = mockGTC.address;
-        await web3.eth.sendTransaction({ from: accounts[1], to: addr, value: 1200000 });
+        await web3.eth.sendTransaction({from: accounts[1], to: addr, value: 1200000});
 
         await mockGTC.setMockWeiRaised(1200000);
 
         await stubUtil.addMethod(rStub, 'recordReimbursement');
         await stubUtil.addMethod(inactiveToken, 'resetInactiveTokenCycle');
-        await stubUtil.addMethod(projectLeaderTracker, 'reset');
+        await stubUtil.addMethod(projectLeaderTracker, "reset");
         await mockGTC.reimburseFunds();
-      });
+      })
 
       after(async () => {
         await mockGTC.setMockDoomsDay(defaultDoomsDay);
         await stubUtil.resetMethod(rStub, 'recordReimbursement');
         await stubUtil.resetMethod(inactiveToken, 'resetInactiveTokenCycle');
-        await stubUtil.resetMethod(projectLeaderTracker, 'reset');
-      });
+        await stubUtil.resetMethod(projectLeaderTracker, "reset");
+      })
 
       it('transfers weiRaised to reimbursements', async () => {
         let balance = await await weiBalanceOf(rStub.address);
         assert.equal(balance, 1200000, 'weiRaised not forwarded to reimbursements');
-      });
+      })
 
       it('records reiumbursement transfer', async () => {
         let { called, firstUint } = await stubUtil.callHistory(rStub, 'recordReimbursement');
         assert.equal(called, true, 'reimbursement not recorded');
         assert.equal(firstUint, 1200000, 'reimbursement amount not recorded properly');
-      });
+      })
 
       it('sets weiRaised to 0', async () => {
         let weiRaised = await mockGTC.weiRaised_.call();
         assert.equal(weiRaised, 0, 'weiRaised should be set to 0');
-      });
+      })
 
       it('resets the inactive token cycle and resets the developers inactiveTokens', async () => {
         let { called } = await stubUtil.callHistory(inactiveToken, 'resetInactiveTokenCycle');
         assert.equal(called, true, 'inactive token cycle should be reset');
-      });
-    });
+      })
+    })
 
     describe('when the crowdsale is still open', async () => {
       before(async () => {
-        await web3.eth.sendTransaction({ from: accounts[1], to: mockGTC.address, value: 1200000 });
+        await web3.eth.sendTransaction({from: accounts[1], to: mockGTC.address, value: 1200000});
         await mockGTC.setMockWeiRaised(1200000);
-      });
+      })
 
       it('reverts', async () => {
         await exceptions.catchRevert(mockGTC.reimburseFunds());
-      });
-    });
-  });
+      })
+    })
+  })
+
 
   // describe('transferVotes', async () => {
   //   before(async () => {
@@ -742,7 +718,7 @@ contract('GNITokenCrowdsale', async (_accounts) => {
   //       assert.equal(firstUint, 20000000, 'pending activations should be increases by the number of tokens associated with the activated project');
   //     })
   //   })
-});
+})
 
 const setUp = async () => {
   const votingToken = await VotingTokenStub.new();
@@ -752,7 +728,7 @@ const setUp = async () => {
   projectLeaderTracker = await ProjectLeaderTrackerStub.new();
   tokenPurchaseHelper = await TokenPurchaseHelperStub.new();
   await initMock();
-};
+}
 
 const initMock = async () => {
   defaultOpeningTime = await getLatestBlockTime();
@@ -764,12 +740,12 @@ const initMock = async () => {
     1,
     accounts[0],
     inactiveToken.address,
-    rStub.address,
+    rStub.address
   );
   await mockGTC.addCoAmendment(tokenPurchaseHelper.address);
   await mockGTC.addCoAmendment(projectLeaderTracker.address);
   await mockGTC.addCoAmendment(accounts[2]);
-};
+}
 
 // const initProjectStubs = async () => {
 //   projStub1 = await ProjectStub.new(
@@ -823,13 +799,13 @@ const initMock = async () => {
 
 const getDoomsDay = async () => {
   return await mockGTC.mockDoomsDay.call();
-};
+}
 
 const getWeiRaised = async () => {
   return await mockGTC.weiRaised_.call();
-};
+}
 
 const getLatestBlockTime = async () => {
   let time = await web3.eth.getBlock('latest');
   return time.timestamp;
-};
+}

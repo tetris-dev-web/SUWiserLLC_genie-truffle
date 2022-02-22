@@ -1,4 +1,4 @@
-const getProjectAddresses = async (projectFactory) => {
+const getProjectAddresses = async projectFactory => {
   const totalProjectCount = await projectFactory.totalProjectCount();
   const pendingAddrs = [];
 
@@ -8,8 +8,8 @@ const getProjectAddresses = async (projectFactory) => {
   }
 
   return Promise.all(pendingAddrs);
-};
+}
 
 module.exports = {
-  getProjectAddresses,
-};
+  getProjectAddresses
+}

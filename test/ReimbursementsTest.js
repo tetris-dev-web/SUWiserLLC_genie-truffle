@@ -1,4 +1,4 @@
-//
+// 
 //
 //
 // it('sets inactiveTokensAtClosing to totalInactiveSupply - totalPendingActivations', async () => {

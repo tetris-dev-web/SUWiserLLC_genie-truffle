@@ -1,5 +1,5 @@
-const TokenMock = artifacts.require('TokenMock');
-const DividendsStub = artifacts.require('DividendsStub');
+const TokenMock = artifacts.require("TokenMock");
+const DividendsStub = artifacts.require("DividendsStub");
 const BigNumber = require('bignumber.js');
 const multiplier = new BigNumber('10e30');
 
@@ -33,15 +33,15 @@ contract('Token', async (_accounts) => {
 
   before(async () => {
     await setUp();
-  });
+  })
 
   describe('totalSupply', async () => {
     it('returns the total supply of tokens', async () => {
       let bigNumber = await mT.totalSupply();
       let supply = parseBN(bigNumber);
       assert.equal(supply, 17000, 'incorrect total supply');
-    });
-  });
+    })
+  })
 
   // describe('totalActiveSupply', async () => {
   //   it('returns the total active supply of tokens', async () => {
@@ -65,15 +65,15 @@ contract('Token', async (_accounts) => {
 
       let balance = await parseWithArg(getTotalBalance, accounts[1]);
       assert.equal(balance, 7000, 'incorrect balance for account');
-    });
+    })
 
     it('returns the active balance of the passed address when the account is not up to date with the current inactive token cycle', async () => {
       await mT.setMockCycleUpdateStatus(accounts[2], false);
 
       let balance = await parseWithArg(getTotalBalance, accounts[2]);
       assert.equal(balance, 3000, 'incorrect balance for account');
-    });
-  });
+    })
+  })
 
   // describe('activeBalanceOf', async () => {
   //   it('returns the active balance of the passed address', async () => {
@@ -226,6 +226,7 @@ contract('Token', async (_accounts) => {
 
   describe('transfer', async () => {
     describe('when the sender can cover the value', async () => {
+
       //it initializes the account
 
       //when the account has been updated -- works as expected
@@ -237,30 +238,22 @@ contract('Token', async (_accounts) => {
           // await stubUtil.addMethod(iL, 'addVoteCredit');
           // await stubUtil.addMethod(iL, 'addInvestor');
           await mT.setMockCycleUpdateStatus(accounts[2], true);
-          await mT.transfer(accounts[2], 3000, { from: accounts[1] });
-        });
+          await mT.transfer(accounts[2], 3000, {from: accounts[1]});
+        })
 
         after(async () => {
           await resetBalances();
-        });
+        })
 
         it('removes the token value from the senders total balance', async () => {
           let senderTotalBalanceT2 = await parseWithArg(getTotalBalance, accounts[1]);
-          assert.equal(
-            senderTotalBalanceT2,
-            senderTotalBalanceT1 - 3000,
-            'sender total balance should decrease by the value',
-          );
-        });
+          assert.equal(senderTotalBalanceT2, senderTotalBalanceT1 - 3000, 'sender total balance should decrease by the value');
+        })
 
         it('removes the token value from the senders active balance', async () => {
           let senderActiveBalanceT2 = await parseWithArg(getActiveBalance, accounts[1]);
-          assert.equal(
-            senderActiveBalanceT2,
-            senderActiveBalanceT1 - 3000,
-            'sender active balance should decrease by the value',
-          );
-        });
+          assert.equal(senderActiveBalanceT2, senderActiveBalanceT1 - 3000, 'sender active balance should decrease by the value');
+        })
 
         // it('does not change the senders inactive balance', async () => {
         //   let senderInactiveBalanceT2 = await parseWithArg(getInactiveBalance, accounts[1]);
@@ -306,16 +299,12 @@ contract('Token', async (_accounts) => {
         it('does not change totalSupply', async () => {
           let totalSupplyT2 = await parseMethod(getTotalSupply);
           assert.equal(totalSupplyT2, totalSupplyT1, 'totalSupply should not change');
-        });
+        })
 
         it('does not change totalActiveSupply', async () => {
           let totalActiveSupplyT2 = await parseMethod(getTotalActiveSupply);
-          assert.equal(
-            totalActiveSupplyT2,
-            totalActiveSupplyT1,
-            'totalActiveSupply should not change',
-          );
-        });
+          assert.equal(totalActiveSupplyT2, totalActiveSupplyT1, 'totalActiveSupply should not change');
+        })
         //
         // it('does not change totalInactiveSupply', async () => {
         //   let totalInactiveSupplyT2 = await parseMethod(getTotalInactiveSupply);
@@ -326,7 +315,7 @@ contract('Token', async (_accounts) => {
         //   let totalAccounts = await parseMethod(mT.totalAccounts);
         //   assert.equal(totalAccounts, 2, 'total number of accounts should not change');
         // })
-      });
+      })
 
       // describe('when the receiever has not been updated with the current vote cycle', async () => {
       //   //sets freedUp balance to the receivers total balance in addition to everything below
@@ -509,18 +498,18 @@ contract('Token', async (_accounts) => {
       //     })
       //   })
       // })
-    });
+    })
 
     describe('when sender cannot cover the value', async () => {
       after(async () => {
         await resetBalances();
-      });
+      })
 
       it('reverts', async () => {
-        await exceptions.catchRevert(mT.transfer(accounts[2], 5000, { from: accounts[1] }));
-      });
-    });
-  });
+        await exceptions.catchRevert(mT.transfer(accounts[2], 5000, {from: accounts[1]}));
+      })
+    })
+  })
 
   // describe('transferInactive', async () => {
   //   describe('when sent by the owner', async () => {
@@ -870,14 +859,14 @@ contract('Token', async (_accounts) => {
 
   describe('approve', async () => {
     before(async () => {
-      await mT.approve(accounts[2], 3000, { from: accounts[1] });
-    });
+      await mT.approve(accounts[2], 3000, {from: accounts[1]})
+    })
 
     it('sets the spenders allowance for the sender/owner', async () => {
       let afterAllowance = await mT.allowance(accounts[1], accounts[2]);
       assert.equal(afterAllowance, 3000, 'allowance not set');
-    });
-  });
+    })
+  })
 
   describe('increaseApproval', async () => {
     let initialAllowance;
@@ -885,14 +874,14 @@ contract('Token', async (_accounts) => {
     before(async () => {
       let bNAllowance = await mT.allowance(accounts[1], accounts[2]);
       initialAllowance = parseBN(bNAllowance);
-      await mT.increaseApproval(accounts[2], 500, { from: accounts[1] });
-    });
+      await mT.increaseApproval(accounts[2], 500, {from: accounts[1]})
+    })
 
     it('increases the spenders allowance for the sender/owner', async () => {
       let afterAllowance = await mT.allowance(accounts[1], accounts[2]);
       assert.equal(afterAllowance, initialAllowance + 500, 'allowance not set');
-    });
-  });
+    })
+  })
 
   describe('decreaseApproval', async () => {
     let initialAllowance;
@@ -900,47 +889,41 @@ contract('Token', async (_accounts) => {
     before(async () => {
       let bNAllowance = await mT.allowance(accounts[1], accounts[2]);
       initialAllowance = parseBN(bNAllowance);
-      await mT.decreaseApproval(accounts[2], 500, { from: accounts[1] });
-    });
+      await mT.decreaseApproval(accounts[2], 500, {from: accounts[1]})
+    })
 
     it('decreases the spenders allowance for the sender/owner', async () => {
       let afterAllowance = await mT.allowance(accounts[1], accounts[2]);
       assert.equal(afterAllowance, initialAllowance - 500, 'allowance not set');
-    });
-  });
+    })
+  })
 
   describe('transferFrom', async () => {
     describe('when the sender is not allowed to spend the amount', async () => {
       after(async () => {
         await resetBalances();
-      });
+      })
 
       it('reverts', async () => {
-        exceptions.catchRevert(
-          mT.transferFrom(accounts[1], accounts[2], 2000, { from: accounts[0] }),
-        );
-      });
-    });
+        exceptions.catchRevert(mT.transferFrom(accounts[1], accounts[2], 2000, {from: accounts[0]}))
+      })
+    })
 
     describe('when the sender is allowed to spend the amount', async () => {
       describe('when the from address has enough active tokens to transfer', async () => {
         before(async () => {
-          await mT.approve(accounts[0], 3000, { from: accounts[1] });
-          await mT.transferFrom(accounts[1], accounts[2], 3000, { from: accounts[0] });
-        });
+          await mT.approve(accounts[0], 3000, {from: accounts[1]})
+          await mT.transferFrom(accounts[1], accounts[2], 3000, {from: accounts[0]});
+        })
 
         after(async () => {
           await resetBalances();
-        });
+        })
 
         it('removes the token value from the from address total balance', async () => {
           let senderTotalBalanceT2 = await parseWithArg(getTotalBalance, accounts[1]);
-          assert.equal(
-            senderTotalBalanceT2,
-            senderTotalBalanceT1 - 3000,
-            'from total balance should decrease by the value',
-          );
-        });
+          assert.equal(senderTotalBalanceT2, senderTotalBalanceT1 - 3000, 'from total balance should decrease by the value');
+        })
 
         // it('removes the token value from the from address active balance', async () => {
         //   let senderActiveBalanceT2 = await parseWithArg(getActiveBalance, accounts[1]);
@@ -954,12 +937,8 @@ contract('Token', async (_accounts) => {
 
         it('adds the token value to the recipients total balance', async () => {
           let receiverTotalBalanceT2 = await parseWithArg(getTotalBalance, accounts[2]);
-          assert.equal(
-            receiverTotalBalanceT2,
-            receiverTotalBalanceT1 + 3000,
-            'recipient total balance should increase by the value',
-          );
-        });
+          assert.equal(receiverTotalBalanceT2, receiverTotalBalanceT1 + 3000, 'recipient total balance should increase by the value');
+        })
 
         // it('adds the token value to the recipients active balance', async () => {
         //   let receiverActiveBalanceT2 = await parseWithArg(getActiveBalance, accounts[2]);
@@ -974,7 +953,7 @@ contract('Token', async (_accounts) => {
         it('does not change totalSupply', async () => {
           let totalSupplyT2 = await parseMethod(getTotalSupply);
           assert.equal(totalSupplyT2, totalSupplyT1, 'totalSupply should not change');
-        });
+        })
 
         // it('does not change totalActiveSupply', async () => {
         //   let totalActiveSupplyT2 = await parseMethod(getTotalActiveSupply);
@@ -1002,44 +981,38 @@ contract('Token', async (_accounts) => {
         //   assert.equal(firstAddress, accounts[2], 'vote credit not sent to the receiver');
         //   assert.equal(firstUint, 3000, 'votes credit added should reflect the token value');
         // })
-      });
+      })
 
       describe('when the from address does not have enough active tokens to cover the transfer', async () => {
         before(async () => {
-          await mT.approve(accounts[0], 5000, { from: accounts[1] });
-        });
+          await mT.approve(accounts[0], 5000, {from: accounts[1]})
+        })
 
         after(async () => {
           await resetBalances();
-        });
+        })
 
         it('reverts', async () => {
-          exceptions.catchRevert(
-            mT.transferFrom(accounts[1], accounts[2], 5000, { from: accounts[0] }),
-          );
-        });
-      });
-    });
-  });
+          exceptions.catchRevert(mT.transferFrom(accounts[1], accounts[2], 5000, {from: accounts[0]}));
+        })
+      })
+    })
+  })
 
   describe('mint', async () => {
     describe('when called by the owner', async () => {
       before(async () => {
-        await mT.mint(accounts[2], 3000, { from: accounts[1] });
-      });
+        await mT.mint(accounts[2], 3000, {from: accounts[1]});
+      })
 
       after(async () => {
         resetBalances();
-      });
+      })
 
       it('increases the totalSupply by the amount', async () => {
         let totalSupplyT2 = await parseMethod(getTotalSupply);
-        assert.equal(
-          totalSupplyT2,
-          totalSupplyT1 + 3000,
-          'totalSupply should increase by the amount',
-        );
-      });
+        assert.equal(totalSupplyT2, totalSupplyT1 + 3000, 'totalSupply should increase by the amount');
+      })
 
       // it('increases the totalInactiveSupply by the amount', async () => {
       //   let totalInactiveSupplyT2 = await parseMethod(getTotalInactiveSupply);
@@ -1053,12 +1026,9 @@ contract('Token', async (_accounts) => {
 
       it('increases the receivers total balance by the amount', async () => {
         let receiverTotalBalanceT2 = await parseWithArg(getTotalBalance, accounts[2]);
-        assert.equal(
-          receiverTotalBalanceT2,
-          receiverTotalBalanceT1 + 3000,
-          'receiver balance should increase by the amount',
-        );
-      });
+        assert.equal(receiverTotalBalanceT2, receiverTotalBalanceT1 + 3000, 'receiver balance should increase by the amount');
+      })
+
 
       // it('increases the receivers inactive balance by the amount', async () => {
       //   let receiverInactiveBalanceT2 = await parseWithArg(getInactiveBalance, accounts[2]);
@@ -1069,25 +1039,25 @@ contract('Token', async (_accounts) => {
       //   let receiverActiveBalanceT2 = await parseWithArg(getActiveBalance, accounts[2]);
       //   assert.equal(receiverActiveBalanceT2, receiverActiveBalanceT1, 'receiver active balance should not change');
       // })
-    });
+    })
 
     describe('when called by an account other than the owner', async () => {
       it('reverts', async () => {
-        await exceptions.catchRevert(mT.mint(accounts[2], 3000, { from: accounts[0] }));
-      });
-    });
-  });
+        await exceptions.catchRevert(mT.mint(accounts[2], 3000, {from: accounts[0]}));
+      })
+    })
+  })
 
   // describe('resetInactiveTokenCycle', async () => {
   //   before(async () => {
   //
   //   })
   // })
-});
+})
 
 const mockT = async () => {
   mT = await TokenMock.new();
-};
+}
 
 // const iLStub = async () => {
 //   iL = await InvestorListStub.new();
@@ -1095,7 +1065,7 @@ const mockT = async () => {
 
 const dStub = async () => {
   d = await DividendsStub.new(mT.address, accounts[0]);
-};
+}
 
 const setUp = async () => {
   // await iLStub();
@@ -1103,15 +1073,15 @@ const setUp = async () => {
   await dStub();
   await resetBalances();
   await setValues();
-  await mT.transferOwnership(accounts[1], { from: accounts[0] });
-  await mT.initializeDividendWallet(d.address, { from: accounts[1] });
-};
+  await mT.transferOwnership(accounts[1], {from: accounts[0]});
+  await mT.initializeDividendWallet(d.address, {from: accounts[1]});
+}
 
 const resetBalances = async () => {
   await mT.resetSupply();
   await mT.initMockBalance(accounts[1], 4000, 3000, 2500);
   await mT.initMockBalance(accounts[2], 3000, 7000, 4000);
-};
+}
 
 const setValues = async () => {
   totalSupplyT1 = await parseMethod(getTotalSupply);
@@ -1122,41 +1092,42 @@ const setValues = async () => {
   senderTotalBalanceT1 = await parseWithArg(getTotalBalance, accounts[1]);
   senderActiveBalanceT1 = await parseWithArg(getActiveBalance, accounts[1]);
   senderInactiveBalanceT1 = await parseWithArg(getInactiveBalance, accounts[1]);
-  senderAssignedBalanceT1 = await parseWithArg(mT.assignedBalanceOf, accounts[1]);
-  senderFreedUpBalanceT1 = await parseWithArg(mT.freedUpBalanceOf, accounts[1]);
+  senderAssignedBalanceT1 =  await parseWithArg(mT.assignedBalanceOf, accounts[1]);
+  senderFreedUpBalanceT1 =  await parseWithArg(mT.freedUpBalanceOf, accounts[1]);
 
   await mT.setMockCycleUpdateStatus(accounts[2], true);
   receiverTotalBalanceT1 = await parseWithArg(getTotalBalance, accounts[2]);
   receiverActiveBalanceT1 = await parseWithArg(getActiveBalance, accounts[2]);
   receiverInactiveBalanceT1 = await parseWithArg(getInactiveBalance, accounts[2]);
-  receiverAssignedBalanceT1 = await parseWithArg(mT.assignedBalanceOf, accounts[2]);
-  receiverFreedUpBalanceT1 = await parseWithArg(mT.freedUpBalanceOf, accounts[2]);
-};
+  receiverAssignedBalanceT1 =  await parseWithArg(mT.assignedBalanceOf, accounts[2]);
+  receiverFreedUpBalanceT1 =  await parseWithArg(mT.freedUpBalanceOf, accounts[2]);
+
+}
 
 const getTotalBalance = async (account) => {
   return await mT.balanceOf(account);
-};
+}
 
 const getActiveBalance = async (account) => {
   return await mT.activeBalanceOf(account);
-};
+}
 
 const getInactiveBalance = async (account) => {
   return await mT.inactiveBalanceOf(account);
-};
+}
 
 const getTotalSupply = async () => {
   return await mT.totalSupply();
-};
+}
 
 const getTotalActiveSupply = async () => {
   return await mT.totalActiveSupply();
-};
+}
 
 const getTotalInactiveSupply = async () => {
   return await mT.totalInactiveSupply();
-};
+}
 
 const getMockInactiveTokenCycle = async () => {
   return await mT.getMockInactiveTokenCycle.call();
-};
+}

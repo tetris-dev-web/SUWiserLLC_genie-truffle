@@ -1,6 +1,6 @@
-const DividendsMock = artifacts.require('DividendsMock');
-const TokenStub = artifacts.require('TokenStub');
-const InvestorListStub = artifacts.require('InvestorListStub');
+const DividendsMock = artifacts.require("DividendsMock");
+const TokenStub = artifacts.require("TokenStub");
+const InvestorListStub = artifacts.require("InvestorListStub");
 const BigNumber = require('bignumber.js');
 const exceptions = require('./exceptions');
 const { parseBN, parseMethod, weiBalanceOf } = require('./parseUtil');
@@ -13,7 +13,7 @@ contract('Dividends', async (_accounts) => {
 
   before(async () => {
     await setUp();
-  });
+  })
 
   describe('payable', async () => {
     let initialBalance;
@@ -26,38 +26,23 @@ contract('Dividends', async (_accounts) => {
       let points = await mD.totalDividendPoints();
       initialPoints = new BigNumber(points.toString());
       addedWei = new BigNumber('1e18');
-      await web3.eth.sendTransaction({
-        from: accounts[1],
-        to: mD.address,
-        value: web3.toWei(1, 'ether'),
-      });
-    });
+      await web3.eth.sendTransaction({from: accounts[1], to: mD.address, value: web3.toWei(1, "ether")});
+    })
 
     it('should increase the contract ether by the value sent', async () => {
       let balance = await web3.eth.getBalance(mD.address);
       let afterBalance = await web3.fromWei(balance.toNumber(), 'ether');
-      assert.equal(
-        Number(afterBalance),
-        Number(initialBalance) + 1,
-        'contract ether not increased by the value',
-      );
-    });
+      assert.equal(Number(afterBalance), Number(initialBalance) + 1, 'contract ether not increased by the value');
+    })
 
     it('should increase totalDividendPoints as a function of (wei value * multiplier) / totalTokens', async () => {
       let points = await mD.totalDividendPoints();
       let afterPoints = new BigNumber(points.toString());
-      let expected = initialPoints
-        .plus(addedWei)
-        .times(multiplier)
-        .dividedBy('90000000')
-        .decimalPlaces(0);
+      let expected = initialPoints.plus(addedWei).times(multiplier).dividedBy('90000000').decimalPlaces(0);
 
-      assert(
-        afterPoints.isEqualTo(expected),
-        'totalDividendPoints not increased by the proper amount',
-      );
-    });
-  });
+      assert(afterPoints.isEqualTo(expected), 'totalDividendPoints not increased by the proper amount');
+    })
+  })
 
   describe('distributeDividend', async () => {
     let initialAccountEth;
@@ -74,7 +59,7 @@ contract('Dividends', async (_accounts) => {
       let accountBalance = await web3.eth.getBalance(accounts[3]);
       initialAccountEth = await web3.fromWei(accountBalance.toNumber(), 'ether');
       await mD.distributeDividend(accounts[3]);
-    });
+    })
 
     it('distributes a dividend based on the amount owed', async () => {
       let contractBalance = await web3.eth.getBalance(mD.address);
@@ -86,26 +71,21 @@ contract('Dividends', async (_accounts) => {
 
       let accountAddition = afterAccountEth - initialAccountEth;
 
-      assert.equal(accountAddition.toFixed(10), 0.1666666667, 'incorrect ether amount transferred');
-      assert.equal(
-        contractLoss.toFixed(10),
-        accountAddition.toFixed(10),
-        'ether removed from contract not equal to ether received by account',
-      );
-    });
+      assert.equal(accountAddition.toFixed(10), .1666666667, 'incorrect ether amount transferred');
+      assert.equal(contractLoss.toFixed(10), accountAddition.toFixed(10), 'ether removed from contract not equal to ether received by account');
+    })
 
     it('sets the accounts lastDividendPoints to the totallDividendPoints', async () => {
       let lastPoints = await mD.lastDividendPointsOf(accounts[3]);
       lastPoints = new BigNumber(lastPoints.toString());
       let totalPoints = await mD.totalDividendPoints();
       totalPoints = new BigNumber(totalPoints.toString());
-      assert(
-        lastPoints.isEqualTo(totalPoints),
-        'lastDividend for account should be set to totalDividendPoints',
-      );
-    });
-  });
-});
+      assert(lastPoints.isEqualTo(totalPoints), 'lastDividend for account should be set to totalDividendPoints');
+    })
+  })
+})
+
+
 
 const setUp = async () => {
   let iL = await InvestorListStub.new();
@@ -115,4 +95,4 @@ const setUp = async () => {
 
   mD = await DividendsMock.new(token.address, accounts[1]);
   // await web3.eth.sendTransaction({from: accounts[1], to: mD.address, value: web3.toWei(9, "ether")});
-};
+}

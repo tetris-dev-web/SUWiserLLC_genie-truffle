@@ -2,11 +2,11 @@ const { parseBN } = require('./parseUtil');
 
 const addMethod = async (stub, methodName) => {
   await stub.addMethod(methodName);
-};
+}
 
 const resetMethod = async (stub, methodName) => {
   await stub.resetMethod(methodName);
-};
+}
 
 const callHistory = async (stub, methodName) => {
   let data = await stub.callHistory(methodName);
@@ -22,12 +22,12 @@ const callHistory = async (stub, methodName) => {
     secondAddress: data[7],
     thirdAddress: data[8],
     called: data[9],
-    firstBool: data[10],
-  };
-};
+    firstBool: data[10]
+  }
+}
 
 module.exports = {
   addMethod,
   resetMethod,
-  callHistory,
-};
+  callHistory
+}

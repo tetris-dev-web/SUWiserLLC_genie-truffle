@@ -1,0 +1,1252 @@
+{
+  "contractName": "ProjectFactoryHelperStub",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "projectLeaderTracker",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "activation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "methodName",
+          "type": "string"
+        }
+      ],
+      "name": "addMethod",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "methodName",
+          "type": "string"
+        }
+      ],
+      "name": "callHistory",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "methodName",
+          "type": "string"
+        }
+      ],
+      "name": "resetMethod",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "voting",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_activation",
+          "type": "address"
+        },
+        {
+          "name": "_voting",
+          "type": "address"
+        },
+        {
+          "name": "_projectLeaderTracker",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipRenounced",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "projectAddr",
+          "type": "address"
+        }
+      ],
+      "name": "handleNewProject",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516060806115af833981018060405281019080805190602001909291908051906020019092919080519060200190929190505050828282336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555082600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505050505061144d806101626000396000f3006080604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806324745258146100b45780633629c8de1461010b5780635106b1421461016257806351542e3a146101a5578063547d80201461020e578063715018a61461048c5780638da5cb5b146104a3578063b2bdfa7b146104fa578063f2fde38b14610551578063f427b13514610594578063fce1ccca146105fd575b600080fd5b3480156100c057600080fd5b506100c9610654565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561011757600080fd5b5061012061067a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016e57600080fd5b506101a3600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106a0565b005b3480156101b157600080fd5b5061020c600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610729565b005b34801561021a57600080fd5b50610275600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610931565b604051808c81526020018b81526020018a81526020018060200180602001806020018973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001861515151581526020018515151515815260200184810384528c818151815260200191508051906020019080838360005b8381101561037957808201518184015260208101905061035e565b50505050905090810190601f1680156103a65780820380516001836020036101000a031916815260200191505b5084810383528b818151815260200191508051906020019080838360005b838110156103df5780820151818401526020810190506103c4565b50505050905090810190601f16801561040c5780820380516001836020036101000a031916815260200191505b5084810382528a818151815260200191508051906020019080838360005b8381101561044557808201518184015260208101905061042a565b50505050905090810190601f1680156104725780820380516001836020036101000a031916815260200191505b509e50505050505050505050505050505060405180910390f35b34801561049857600080fd5b506104a1610d6a565b005b3480156104af57600080fd5b506104b8610e6c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561050657600080fd5b5061050f610e91565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561055d57600080fd5b50610592600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610eba565b005b3480156105a057600080fd5b506105fb600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610f29565b005b34801561060957600080fd5b5061061261113b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600560405180807f68616e646c654e657750726f6a65637400000000000000000000000000000000815250601001905090815260200160405180910390209050818160060160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b61073161125b565b806005836040518082805190602001908083835b60208310151561076a5780518252602082019150602081019050602083039250610745565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000155602082015181600101556040820151816002015560608201518160030190805190602001906107d79291906112fc565b5060808201518160040190805190602001906107f49291906112fc565b5060a08201518160050190805190602001906108119291906112fc565b5060c08201518160060160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060e08201518160070160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101008201518160080160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101208201518160080160146101000a81548160ff0219169083151502179055506101408201518160080160156101000a81548160ff0219169083151502179055509050505050565b60008060006060806060600080600080600061094b61125b565b60058d6040518082805190602001908083835b602083101515610983578051825260208201915060208101905060208303925061095e565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206101606040519081016040529081600082015481526020016001820154815260200160028201548152602001600382018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610a7a5780601f10610a4f57610100808354040283529160200191610a7a565b820191906000526020600020905b815481529060010190602001808311610a5d57829003601f168201915b50505050508152602001600482018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610b1c5780601f10610af157610100808354040283529160200191610b1c565b820191906000526020600020905b815481529060010190602001808311610aff57829003601f168201915b50505050508152602001600582018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bbe5780601f10610b9357610100808354040283529160200191610bbe565b820191906000526020600020905b815481529060010190602001808311610ba157829003601f168201915b505050505081526020016006820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016007820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016008820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016008820160149054906101000a900460ff161515151581526020016008820160159054906101000a900460ff1615151515815250509050806000015181602001518260400151836060015184608001518560a001518660c001518760e001518861010001518961012001518a61014001518797508696508595509b509b509b509b509b509b509b509b509b509b509b505091939597999b90929496989a50565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610dc557600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610f1557600080fd5b6005600181905550610f2681611161565b50565b60006005826040518082805190602001908083835b602083101515610f635780518252602082019150602081019050602083039250610f3e565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902090506000816000018190555060008160010181905550600081600201819055506020604051908101604052806000815250816003019080519060200190610fde92919061137c565b50602060405190810160405280600081525081600401908051906020019061100792919061137c565b50602060405190810160405280600081525081600501908051906020019061103092919061137c565b5060008160060160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008160070160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008160080160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008160080160146101000a81548160ff02191690831515021790555060008160080160156101000a81548160ff0219169083151502179055505050565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561119d57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b61016060405190810160405280600081526020016000815260200160008152602001606081526020016060815260200160608152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff1681526020016000151581526020016000151581525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061133d57805160ff191683800117855561136b565b8280016001018555821561136b579182015b8281111561136a57825182559160200191906001019061134f565b5b50905061137891906113fc565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106113bd57805160ff19168380011785556113eb565b828001600101855582156113eb579182015b828111156113ea5782518255916020019190600101906113cf565b5b5090506113f891906113fc565b5090565b61141e91905b8082111561141a576000816000905550600101611402565b5090565b905600a165627a7a72305820746c1d44c752d4af71c788a663e1d13b75ddfc41ba0f21a6de33ace5c2ef68e60029",
+  "deployedBytecode": "0x6080604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806324745258146100b45780633629c8de1461010b5780635106b1421461016257806351542e3a146101a5578063547d80201461020e578063715018a61461048c5780638da5cb5b146104a3578063b2bdfa7b146104fa578063f2fde38b14610551578063f427b13514610594578063fce1ccca146105fd575b600080fd5b3480156100c057600080fd5b506100c9610654565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561011757600080fd5b5061012061067a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016e57600080fd5b506101a3600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106a0565b005b3480156101b157600080fd5b5061020c600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610729565b005b34801561021a57600080fd5b50610275600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610931565b604051808c81526020018b81526020018a81526020018060200180602001806020018973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001861515151581526020018515151515815260200184810384528c818151815260200191508051906020019080838360005b8381101561037957808201518184015260208101905061035e565b50505050905090810190601f1680156103a65780820380516001836020036101000a031916815260200191505b5084810383528b818151815260200191508051906020019080838360005b838110156103df5780820151818401526020810190506103c4565b50505050905090810190601f16801561040c5780820380516001836020036101000a031916815260200191505b5084810382528a818151815260200191508051906020019080838360005b8381101561044557808201518184015260208101905061042a565b50505050905090810190601f1680156104725780820380516001836020036101000a031916815260200191505b509e50505050505050505050505050505060405180910390f35b34801561049857600080fd5b506104a1610d6a565b005b3480156104af57600080fd5b506104b8610e6c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561050657600080fd5b5061050f610e91565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561055d57600080fd5b50610592600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610eba565b005b3480156105a057600080fd5b506105fb600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610f29565b005b34801561060957600080fd5b5061061261113b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600560405180807f68616e646c654e657750726f6a65637400000000000000000000000000000000815250601001905090815260200160405180910390209050818160060160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b61073161125b565b806005836040518082805190602001908083835b60208310151561076a5780518252602082019150602081019050602083039250610745565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000155602082015181600101556040820151816002015560608201518160030190805190602001906107d79291906112fc565b5060808201518160040190805190602001906107f49291906112fc565b5060a08201518160050190805190602001906108119291906112fc565b5060c08201518160060160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060e08201518160070160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101008201518160080160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101208201518160080160146101000a81548160ff0219169083151502179055506101408201518160080160156101000a81548160ff0219169083151502179055509050505050565b60008060006060806060600080600080600061094b61125b565b60058d6040518082805190602001908083835b602083101515610983578051825260208201915060208101905060208303925061095e565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206101606040519081016040529081600082015481526020016001820154815260200160028201548152602001600382018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610a7a5780601f10610a4f57610100808354040283529160200191610a7a565b820191906000526020600020905b815481529060010190602001808311610a5d57829003601f168201915b50505050508152602001600482018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610b1c5780601f10610af157610100808354040283529160200191610b1c565b820191906000526020600020905b815481529060010190602001808311610aff57829003601f168201915b50505050508152602001600582018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bbe5780601f10610b9357610100808354040283529160200191610bbe565b820191906000526020600020905b815481529060010190602001808311610ba157829003601f168201915b505050505081526020016006820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016007820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016008820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016008820160149054906101000a900460ff161515151581526020016008820160159054906101000a900460ff1615151515815250509050806000015181602001518260400151836060015184608001518560a001518660c001518760e001518861010001518961012001518a61014001518797508696508595509b509b509b509b509b509b509b509b509b509b509b505091939597999b90929496989a50565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610dc557600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610f1557600080fd5b6005600181905550610f2681611161565b50565b60006005826040518082805190602001908083835b602083101515610f635780518252602082019150602081019050602083039250610f3e565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902090506000816000018190555060008160010181905550600081600201819055506020604051908101604052806000815250816003019080519060200190610fde92919061137c565b50602060405190810160405280600081525081600401908051906020019061100792919061137c565b50602060405190810160405280600081525081600501908051906020019061103092919061137c565b5060008160060160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008160070160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008160080160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008160080160146101000a81548160ff02191690831515021790555060008160080160156101000a81548160ff0219169083151502179055505050565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561119d57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b61016060405190810160405280600081526020016000815260200160008152602001606081526020016060815260200160608152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600073ffffffffffffffffffffffffffffffffffffffff1681526020016000151581526020016000151581525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061133d57805160ff191683800117855561136b565b8280016001018555821561136b579182015b8281111561136a57825182559160200191906001019061134f565b5b50905061137891906113fc565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106113bd57805160ff19168380011785556113eb565b828001600101855582156113eb579182015b828111156113ea5782518255916020019190600101906113cf565b5b5090506113f891906113fc565b5090565b61141e91905b8082111561141a576000816000905550600101611402565b5090565b905600a165627a7a72305820746c1d44c752d4af71c788a663e1d13b75ddfc41ba0f21a6de33ace5c2ef68e60029",
+  "sourceMap": "119:489:18:-;;;196:233;8:9:-1;5:2;;;30:1;27;20:12;5:2;196:233:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;355:11;375:7;391:21;607:10:58;599:5;;:18;;;;;;;;;;;;;;;;;;564:11:37;551:10;;:24;;;;;;;;;;;;;;;;;;593:7;584:6;;:16;;;;;;;;;;;;;;;;;;632:21;609:20;;:44;;;;;;;;;;;;;;;;;;417:244;;;196:233:18;;;119:489;;;;;;",
+  "deployedSourceMap": "119:489:18:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:48:37;;8:9:-1;5:2;;;30:1;27;20:12;5:2;362:48:37;;;;;;;;;;;;;;;;;;;;;;;;;;;304:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;304:28:37;;;;;;;;;;;;;;;;;;;;;;;;;;;435:170:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;435:170:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;411:138:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;411:138:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1001:585;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1001:585:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1001:585:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1001:585:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1001:585:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:114:58;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1128:114:58;;;;;;255:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;255:20:58;;;;;;;;;;;;;;;;;;;;;;;;;;;784:74;;8:9:-1;5:2;;;30:1;27;20:12;5:2;784:74:58;;;;;;;;;;;;;;;;;;;;;;;;;;;1430:121;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1430:121:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;555:440:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;555:440:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;337:20:37;;8:9:-1;5:2;;;30:1;27;20:12;5:2;337:20:37;;;;;;;;;;;;;;;;;;;;;;;;;;;362:48;;;;;;;;;;;;;:::o;304:28::-;;;;;;;;;;;;;:::o;435:170:18:-;497:28;528:6;:26;;;;;;;;;;;;;;;;;;;;;;;;497:57;;588:11;561;:24;;;:38;;;;;;;;;;;;;;;;;;435:170;;:::o;411:138:8:-;477:27;;:::i;:::-;532:11;511:6;518:10;511:18;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;511:18:8;;;;;;;;;;;;;;;;;;;;;:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;411:138;;:::o;1001:585::-;1076:7;1090;1104;1118:6;1138;1158;1178:7;1192;1206;1220:4;1231;1250:20;;:::i;:::-;1273:6;1280:10;1273:18;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;1273:18:8;;;;;;;;;;;;;;;;;;;;;1250:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1314:4;:14;;;1337:4;:15;;;1361:4;:14;;;1384:4;:16;;;1409:4;:17;;;1435:4;:16;;;1460:4;:17;;;1486:4;:18;;;1513:4;:17;;;1539:4;:11;;;1559:4;:14;;;1298:282;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1001:585;;;;;;;;;;;;;;:::o;1128:114:58:-;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1205:5;;;;;;;;;;;1186:25;;;;;;;;;;;;1234:1;1218:5;;:18;;;;;;;;;;;;;;;;;;1128:114::o;255:20::-;;;;;;;;;;;;;:::o;784:74::-;824:7;847:5;;;;;;;;;;;840:12;;784:74;:::o;1430:121::-;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1508:1;1500:5;:9;;;;1516:29;1535:9;1516:18;:29::i;:::-;1430:121;:::o;555:440:8:-;617:21;641:6;648:10;641:18;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;641:18:8;;;;;;;;;;;;;;;;;;;;;617:42;;685:1;668:4;:14;;:18;;;;711:1;693:4;:15;;:19;;;;736:1;719:4;:14;;:18;;;;744:21;;;;;;;;;;;;;:4;:16;;:21;;;;;;;;;;;;:::i;:::-;;772:22;;;;;;;;;;;;;:4;:17;;:22;;;;;;;;;;;;:::i;:::-;;801:21;;;;;;;;;;;;;:4;:16;;:21;;;;;;;;;;;;:::i;:::-;;857:1;829:4;:17;;;:30;;;;;;;;;;;;;;;;;;895:1;866:4;:18;;;:31;;;;;;;;;;;;;;;;;;932:1;904:4;:17;;;:30;;;;;;;;;;;;;;;;;;955:5;941:4;:11;;;:19;;;;;;;;;;;;;;;;;;984:5;967:4;:14;;;:22;;;;;;;;;;;;;;;;;;555:440;;:::o;337:20:37:-;;;;;;;;;;;;;:::o;1692:175:58:-;1784:1;1763:23;;:9;:23;;;;1755:32;;;;;;;;1827:9;1799:38;;1820:5;;;;;;;;;;;1799:38;;;;;;;;;;;;1852:9;1844:5;;:17;;;;;;;;;;;;;;;;;;1692:175;:::o;119:489:18:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\r\nimport './projectFactory/ProjectFactoryHelper.sol';\r\nimport './ContractStub.sol';\r\n\r\ncontract ProjectFactoryHelperStub is ProjectFactoryHelper, ContractStub {\r\n  constructor(\r\n    Activation _activation,\r\n    Voting _voting,\r\n    ProjectLeaderTracker _projectLeaderTracker\r\n    ) public\r\n    ProjectFactoryHelper(\r\n      _activation,\r\n      _voting,\r\n      _projectLeaderTracker\r\n      )\r\n    {}\r\n\r\n  function handleNewProject (address projectAddr) public {\r\n    CallData storage methodState = method['handleNewProject'];\r\n    methodState.firstAddress = projectAddr;\r\n  }\r\n}\r\n",
+  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\ProjectFactoryHelperStub.sol",
+  "ast": {
+    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/ProjectFactoryHelperStub.sol",
+    "exportedSymbols": {
+      "ProjectFactoryHelperStub": [
+        2210
+      ]
+    },
+    "id": 2211,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2170,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:18"
+      },
+      {
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/projectFactory/ProjectFactoryHelper.sol",
+        "file": "./projectFactory/ProjectFactoryHelper.sol",
+        "id": 2171,
+        "nodeType": "ImportDirective",
+        "scope": 2211,
+        "sourceUnit": 5215,
+        "src": "34:51:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/ContractStub.sol",
+        "file": "./ContractStub.sol",
+        "id": 2172,
+        "nodeType": "ImportDirective",
+        "scope": 2211,
+        "sourceUnit": 1021,
+        "src": "87:28:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2173,
+              "name": "ProjectFactoryHelper",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5214,
+              "src": "156:20:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProjectFactoryHelper_$5214",
+                "typeString": "contract ProjectFactoryHelper"
+              }
+            },
+            "id": 2174,
+            "nodeType": "InheritanceSpecifier",
+            "src": "156:20:18"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2175,
+              "name": "ContractStub",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1020,
+              "src": "178:12:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ContractStub_$1020",
+                "typeString": "contract ContractStub"
+              }
+            },
+            "id": 2176,
+            "nodeType": "InheritanceSpecifier",
+            "src": "178:12:18"
+          }
+        ],
+        "contractDependencies": [
+          1020,
+          5214,
+          8668
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2210,
+        "linearizedBaseContracts": [
+          2210,
+          1020,
+          5214,
+          8668
+        ],
+        "name": "ProjectFactoryHelperStub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2190,
+              "nodeType": "Block",
+              "src": "427:2:18",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2191,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2185,
+                    "name": "_activation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2178,
+                    "src": "355:11:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Activation_$3058",
+                      "typeString": "contract Activation"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2186,
+                    "name": "_voting",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2180,
+                    "src": "375:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Voting_$9327",
+                      "typeString": "contract Voting"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2187,
+                    "name": "_projectLeaderTracker",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2182,
+                    "src": "391:21:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ProjectLeaderTracker_$5652",
+                      "typeString": "contract ProjectLeaderTracker"
+                    }
+                  }
+                ],
+                "id": 2188,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2184,
+                  "name": "ProjectFactoryHelper",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5214,
+                  "src": "326:20:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_ProjectFactoryHelper_$5214_$",
+                    "typeString": "type(contract ProjectFactoryHelper)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "326:95:18"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2183,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2178,
+                  "name": "_activation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2191,
+                  "src": "214:22:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Activation_$3058",
+                    "typeString": "contract Activation"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2177,
+                    "name": "Activation",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3058,
+                    "src": "214:10:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Activation_$3058",
+                      "typeString": "contract Activation"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2180,
+                  "name": "_voting",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2191,
+                  "src": "243:14:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Voting_$9327",
+                    "typeString": "contract Voting"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2179,
+                    "name": "Voting",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9327,
+                    "src": "243:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Voting_$9327",
+                      "typeString": "contract Voting"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2182,
+                  "name": "_projectLeaderTracker",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2191,
+                  "src": "264:42:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ProjectLeaderTracker_$5652",
+                    "typeString": "contract ProjectLeaderTracker"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2181,
+                    "name": "ProjectLeaderTracker",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5652,
+                    "src": "264:20:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ProjectLeaderTracker_$5652",
+                      "typeString": "contract ProjectLeaderTracker"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "207:106:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2189,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "427:0:18"
+            },
+            "scope": 2210,
+            "src": "196:233:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2208,
+              "nodeType": "Block",
+              "src": "490:115:18",
+              "statements": [
+                {
+                  "assignments": [
+                    2197
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2197,
+                      "name": "methodState",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 2209,
+                      "src": "497:28:18",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CallData_$858_storage_ptr",
+                        "typeString": "struct ContractStub.CallData"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 2196,
+                        "name": "CallData",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 858,
+                        "src": "497:8:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_CallData_$858_storage_ptr",
+                          "typeString": "struct ContractStub.CallData"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2201,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 2198,
+                      "name": "method",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 862,
+                      "src": "528:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_CallData_$858_storage_$",
+                        "typeString": "mapping(string memory => struct ContractStub.CallData storage ref)"
+                      }
+                    },
+                    "id": 2200,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "68616e646c654e657750726f6a656374",
+                      "id": 2199,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "535:18:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_de3ae6af404636703fe5b4f6c31e2b7b1c68dbe29a94c47f212e34a8770e1419",
+                        "typeString": "literal_string \"handleNewProject\""
+                      },
+                      "value": "handleNewProject"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "528:26:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CallData_$858_storage",
+                      "typeString": "struct ContractStub.CallData storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "497:57:18"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2206,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2202,
+                        "name": "methodState",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2197,
+                        "src": "561:11:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_CallData_$858_storage_ptr",
+                          "typeString": "struct ContractStub.CallData storage pointer"
+                        }
+                      },
+                      "id": 2204,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "firstAddress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 849,
+                      "src": "561:24:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2205,
+                      "name": "projectAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2193,
+                      "src": "588:11:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "561:38:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2207,
+                  "nodeType": "ExpressionStatement",
+                  "src": "561:38:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2209,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "handleNewProject",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2194,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2193,
+                  "name": "projectAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2209,
+                  "src": "462:19:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2192,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:21:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2195,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "490:0:18"
+            },
+            "scope": 2210,
+            "src": "435:170:18",
+            "stateMutability": "nonpayable",
+            "superFunction": 5213,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2211,
+        "src": "119:489:18"
+      }
+    ],
+    "src": "0:610:18"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/ProjectFactoryHelperStub.sol",
+    "exportedSymbols": {
+      "ProjectFactoryHelperStub": [
+        2210
+      ]
+    },
+    "id": 2211,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2170,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:18"
+      },
+      {
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/projectFactory/ProjectFactoryHelper.sol",
+        "file": "./projectFactory/ProjectFactoryHelper.sol",
+        "id": 2171,
+        "nodeType": "ImportDirective",
+        "scope": 2211,
+        "sourceUnit": 5215,
+        "src": "34:51:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/ContractStub.sol",
+        "file": "./ContractStub.sol",
+        "id": 2172,
+        "nodeType": "ImportDirective",
+        "scope": 2211,
+        "sourceUnit": 1021,
+        "src": "87:28:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2173,
+              "name": "ProjectFactoryHelper",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5214,
+              "src": "156:20:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProjectFactoryHelper_$5214",
+                "typeString": "contract ProjectFactoryHelper"
+              }
+            },
+            "id": 2174,
+            "nodeType": "InheritanceSpecifier",
+            "src": "156:20:18"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2175,
+              "name": "ContractStub",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1020,
+              "src": "178:12:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ContractStub_$1020",
+                "typeString": "contract ContractStub"
+              }
+            },
+            "id": 2176,
+            "nodeType": "InheritanceSpecifier",
+            "src": "178:12:18"
+          }
+        ],
+        "contractDependencies": [
+          1020,
+          5214,
+          8668
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2210,
+        "linearizedBaseContracts": [
+          2210,
+          1020,
+          5214,
+          8668
+        ],
+        "name": "ProjectFactoryHelperStub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2190,
+              "nodeType": "Block",
+              "src": "427:2:18",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2191,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2185,
+                    "name": "_activation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2178,
+                    "src": "355:11:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Activation_$3058",
+                      "typeString": "contract Activation"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2186,
+                    "name": "_voting",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2180,
+                    "src": "375:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Voting_$9327",
+                      "typeString": "contract Voting"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2187,
+                    "name": "_projectLeaderTracker",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2182,
+                    "src": "391:21:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ProjectLeaderTracker_$5652",
+                      "typeString": "contract ProjectLeaderTracker"
+                    }
+                  }
+                ],
+                "id": 2188,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2184,
+                  "name": "ProjectFactoryHelper",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5214,
+                  "src": "326:20:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_ProjectFactoryHelper_$5214_$",
+                    "typeString": "type(contract ProjectFactoryHelper)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "326:95:18"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2183,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2178,
+                  "name": "_activation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2191,
+                  "src": "214:22:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Activation_$3058",
+                    "typeString": "contract Activation"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2177,
+                    "name": "Activation",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3058,
+                    "src": "214:10:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Activation_$3058",
+                      "typeString": "contract Activation"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2180,
+                  "name": "_voting",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2191,
+                  "src": "243:14:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Voting_$9327",
+                    "typeString": "contract Voting"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2179,
+                    "name": "Voting",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9327,
+                    "src": "243:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Voting_$9327",
+                      "typeString": "contract Voting"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2182,
+                  "name": "_projectLeaderTracker",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2191,
+                  "src": "264:42:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ProjectLeaderTracker_$5652",
+                    "typeString": "contract ProjectLeaderTracker"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2181,
+                    "name": "ProjectLeaderTracker",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5652,
+                    "src": "264:20:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ProjectLeaderTracker_$5652",
+                      "typeString": "contract ProjectLeaderTracker"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "207:106:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2189,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "427:0:18"
+            },
+            "scope": 2210,
+            "src": "196:233:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2208,
+              "nodeType": "Block",
+              "src": "490:115:18",
+              "statements": [
+                {
+                  "assignments": [
+                    2197
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2197,
+                      "name": "methodState",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 2209,
+                      "src": "497:28:18",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CallData_$858_storage_ptr",
+                        "typeString": "struct ContractStub.CallData"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 2196,
+                        "name": "CallData",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 858,
+                        "src": "497:8:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_CallData_$858_storage_ptr",
+                          "typeString": "struct ContractStub.CallData"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2201,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 2198,
+                      "name": "method",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 862,
+                      "src": "528:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_CallData_$858_storage_$",
+                        "typeString": "mapping(string memory => struct ContractStub.CallData storage ref)"
+                      }
+                    },
+                    "id": 2200,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "68616e646c654e657750726f6a656374",
+                      "id": 2199,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "535:18:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_de3ae6af404636703fe5b4f6c31e2b7b1c68dbe29a94c47f212e34a8770e1419",
+                        "typeString": "literal_string \"handleNewProject\""
+                      },
+                      "value": "handleNewProject"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "528:26:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CallData_$858_storage",
+                      "typeString": "struct ContractStub.CallData storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "497:57:18"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2206,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2202,
+                        "name": "methodState",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2197,
+                        "src": "561:11:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_CallData_$858_storage_ptr",
+                          "typeString": "struct ContractStub.CallData storage pointer"
+                        }
+                      },
+                      "id": 2204,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "firstAddress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 849,
+                      "src": "561:24:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2205,
+                      "name": "projectAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2193,
+                      "src": "588:11:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "561:38:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2207,
+                  "nodeType": "ExpressionStatement",
+                  "src": "561:38:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2209,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "handleNewProject",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2194,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2193,
+                  "name": "projectAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2209,
+                  "src": "462:19:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2192,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:21:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2195,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "490:0:18"
+            },
+            "scope": 2210,
+            "src": "435:170:18",
+            "stateMutability": "nonpayable",
+            "superFunction": 5213,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2211,
+        "src": "119:489:18"
+      }
+    ],
+    "src": "0:610:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2022-02-22T17:36:20.205Z"
+}

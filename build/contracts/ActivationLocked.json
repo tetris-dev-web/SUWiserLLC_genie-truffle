@@ -53,9 +53,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title ActivaitonAccess\r\n * @dev A ActivaitonAccess contract can only be used by its activation account (the one that created it)\r\n */\r\ncontract ActivationLocked {\r\n    address private _activation;\r\n\r\n    event ActivationTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the activation account to the one that is creating the ActivaitonLocked contract.\r\n     */\r\n    constructor () internal {\r\n        _activation = msg.sender;\r\n        emit ActivationTransferred(_activation);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the activation.\r\n     */\r\n    modifier onlyActivation() {\r\n        require(msg.sender == _activation);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the activation.\r\n     */\r\n    function activation() public view returns (address) {\r\n        return _activation;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new activation.\r\n     * @param recipient The address of new activation.\r\n     */\r\n    function transferActivationKey(address recipient) public onlyActivation {\r\n        require(recipient != address(0));\r\n        _activation = recipient;\r\n        emit ActivationTransferred(_activation);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\utility\\ActivationLocked.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\ActivationLocked.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/ActivationLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/ActivationLocked.sol",
     "exportedSymbols": {
       "ActivationLocked": [
         6145
@@ -844,7 +844,7 @@
     "src": "0:1256:31"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/ActivationLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/ActivationLocked.sol",
     "exportedSymbols": {
       "ActivationLocked": [
         6145
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-22T18:24:47.013Z"
+  "updatedAt": "2022-02-24T16:38:29.011Z"
 }

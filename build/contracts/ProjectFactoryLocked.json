@@ -53,9 +53,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title ProjectFactoryLocked\r\n * @dev A ProjectFactoryLocked contract can only be used by its projectFactory account (the one that created it)\r\n */\r\ncontract ProjectFactoryLocked {\r\n    address private _projectFactory;\r\n\r\n    event ProjectFactoryTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the projectFactory account to the one that is creating the ProjectFactoryLocked contract.\r\n     */\r\n    constructor () internal {\r\n        _projectFactory = msg.sender;\r\n        emit ProjectFactoryTransferred(_projectFactory);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the projectFactory.\r\n     */\r\n    modifier onlyProjectFactory() {\r\n        require(msg.sender == _projectFactory);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the projectFactory.\r\n     */\r\n    function projectFactory() public view returns (address) {\r\n        return _projectFactory;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new projectFactory.\r\n     * @param recipient The address of new projectFactory.\r\n     */\r\n    function transferProjectFactoryKey(address recipient) public onlyProjectFactory {\r\n        require(recipient != address(0));\r\n        _projectFactory = recipient;\r\n        emit ProjectFactoryTransferred(_projectFactory);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\utility\\ProjectFactoryLocked.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\ProjectFactoryLocked.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/ProjectFactoryLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/ProjectFactoryLocked.sol",
     "exportedSymbols": {
       "ProjectFactoryLocked": [
         6375
@@ -844,7 +844,7 @@
     "src": "0:1352:34"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/ProjectFactoryLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/ProjectFactoryLocked.sol",
     "exportedSymbols": {
       "ProjectFactoryLocked": [
         6375
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-22T18:24:47.036Z"
+  "updatedAt": "2022-02-24T16:38:29.013Z"
 }

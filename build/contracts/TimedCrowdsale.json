@@ -203,9 +203,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\nimport '../utility/SafeMath.sol';\r\nimport \"./Crowdsale.sol\";\r\n\r\ncontract TimedCrowdsale is Crowdsale {\r\n  using SafeMath for uint256;\r\n  uint256 public openingTime;\r\n  uint256 public doomsDay;\r\n  bool public canReOpen;\r\n  address  public reimbursements;\r\n\r\n  modifier onlyWhileOpen {\r\n    require(block.timestamp >= openingTime && block.timestamp <= doomsDay);\r\n    _;\r\n  }\r\n\r\n  modifier canModifyDoomsDay {\r\n    require((block.timestamp >= openingTime && block.timestamp <= doomsDay) || canReOpen);\r\n    _;\r\n  }\r\n\r\n  constructor(uint256 _openingTime, uint256 _doomsDay, address  _reimbursements) public {\r\n    require(_openingTime >= block.timestamp);\r\n    require(_doomsDay >= _openingTime);\r\n\r\n    openingTime = _openingTime;\r\n    doomsDay = _doomsDay;\r\n    reimbursements = _reimbursements;\r\n  }\r\n\r\n  function hasClosed() public view returns (bool) {\r\n    return block.timestamp > doomsDay;\r\n  }\r\n\r\n  function allowReOpening () external {\r\n    require(msg.sender == reimbursements && hasClosed());\r\n    canReOpen = true;\r\n  }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\crowdsale\\TimedCrowdsale.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\crowdsale\\TimedCrowdsale.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/crowdsale/TimedCrowdsale.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/crowdsale/TimedCrowdsale.sol",
     "exportedSymbols": {
       "TimedCrowdsale": [
         3045
@@ -229,7 +229,7 @@
         "src": "0:32:18"
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/SafeMath.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/SafeMath.sol",
         "file": "../utility/SafeMath.sol",
         "id": 2931,
         "nodeType": "ImportDirective",
@@ -240,7 +240,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/crowdsale/Crowdsale.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/crowdsale/Crowdsale.sol",
         "file": "./Crowdsale.sol",
         "id": 2932,
         "nodeType": "ImportDirective",
@@ -1710,7 +1710,7 @@
     "src": "0:1068:18"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/crowdsale/TimedCrowdsale.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/crowdsale/TimedCrowdsale.sol",
     "exportedSymbols": {
       "TimedCrowdsale": [
         3045
@@ -1734,7 +1734,7 @@
         "src": "0:32:18"
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/SafeMath.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/SafeMath.sol",
         "file": "../utility/SafeMath.sol",
         "id": 2931,
         "nodeType": "ImportDirective",
@@ -1745,7 +1745,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/crowdsale/Crowdsale.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/crowdsale/Crowdsale.sol",
         "file": "./Crowdsale.sol",
         "id": 2932,
         "nodeType": "ImportDirective",
@@ -3220,5 +3220,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-22T18:24:46.997Z"
+  "updatedAt": "2022-02-24T16:38:28.979Z"
 }

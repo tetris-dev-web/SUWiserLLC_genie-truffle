@@ -13,11 +13,22 @@
  */
 const HDWalletProvider = require("truffle-hdwallet-provider");
 require('dotenv').config();
-const privateKeys = [
-  process.env.PRIVATE_KEY,
-  process.env.PRIVATE_KEY1,
-  process.env.PRIVATE_KEY2
-]
+
+let privateKeys = [];
+if (process.env.DEPLOY_ENV == 'ganache') {
+  privateKeys = [
+    process.env.PRIVATE_KEY_GANACHE,
+    process.env.PRIVATE_KEY_GANACHE1,
+    process.env.PRIVATE_KEY_GANACHE2
+  ]
+} else {
+  privateKeys = [
+    process.env.PRIVATE_KEY,
+    process.env.PRIVATE_KEY1,
+    process.env.PRIVATE_KEY2
+  ]
+}
+
 //
 // var HDWalletProvider = require("truffle-hdwallet-provider");
 
@@ -32,8 +43,8 @@ module.exports = {
   },
   networks: {
     development: {
-      host: "localhost",
-      port: 8545,
+      host: "127.0.0.1",
+      port: 7545,
       network_id: "*", // Match any network id
       gasLimit: 10000000
     },

@@ -53,9 +53,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title Tertiary\r\n * @dev A Tertiary contract can only be used by its tertiary account (the one that created it)\r\n */\r\ncontract Tertiary {\r\n    address private _tertiary;\r\n\r\n    event TertiaryTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the tertiary account to the one that is creating the Tertiary contract.\r\n     */\r\n    constructor () internal {\r\n        _tertiary = msg.sender;\r\n        emit TertiaryTransferred(_tertiary);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the tertiary.\r\n     */\r\n    modifier onlyTertiary() {\r\n        require(msg.sender == _tertiary);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the tertiary.\r\n     */\r\n    function tertiary() public view returns (address) {\r\n        return _tertiary;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new tertiary.\r\n     * @param recipient The address of new tertiary.\r\n     */\r\n    function transferTertiary(address recipient) public onlyTertiary {\r\n        require(recipient != address(0));\r\n        _tertiary = recipient;\r\n        emit TertiaryTransferred(_tertiary);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\utility\\Tertiary.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\Tertiary.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/Tertiary.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/Tertiary.sol",
     "exportedSymbols": {
       "Tertiary": [
         9017
@@ -844,7 +844,7 @@
     "src": "0:1181:63"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/Tertiary.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/Tertiary.sol",
     "exportedSymbols": {
       "Tertiary": [
         9017
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-22T17:36:20.252Z"
+  "updatedAt": "2022-02-24T15:34:39.605Z"
 }

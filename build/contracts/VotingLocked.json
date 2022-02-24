@@ -53,9 +53,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title VotingLocked\r\n * @dev A VotingLocked contract can only be used by its voting account (the one that created it)\r\n */\r\ncontract VotingLocked {\r\n    address private _voting;\r\n\r\n    event VotingTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the voting account to the one that is creating the VotingLocked contract.\r\n     */\r\n    constructor () internal {\r\n        _voting = msg.sender;\r\n        emit VotingTransferred(_voting);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the voting.\r\n     */\r\n    modifier onlyVoting() {\r\n        require(msg.sender == _voting);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the voting.\r\n     */\r\n    function voting() public view returns (address) {\r\n        return _voting;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new voting.\r\n     * @param recipient The address of new voting.\r\n     */\r\n    function transferVotingKey(address recipient) public onlyVoting {\r\n        require(recipient != address(0));\r\n        _voting = recipient;\r\n        emit VotingTransferred(_voting);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\utility\\VotingLocked.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\VotingLocked.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/VotingLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/VotingLocked.sol",
     "exportedSymbols": {
       "VotingLocked": [
         6599
@@ -844,7 +844,7 @@
     "src": "0:1160:37"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/VotingLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/VotingLocked.sol",
     "exportedSymbols": {
       "VotingLocked": [
         6599
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-22T18:24:47.037Z"
+  "updatedAt": "2022-02-24T16:38:29.014Z"
 }

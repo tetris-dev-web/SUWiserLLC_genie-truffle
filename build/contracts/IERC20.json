@@ -180,9 +180,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title ERC20 interface\r\n * @dev see https://github.com/ethereum/EIPs/issues/20\r\n */\r\ninterface IERC20 {\r\n    function transfer(address to, uint256 value) external returns (bool);\r\n\r\n    function approve(address spender, uint256 value) external returns (bool);\r\n\r\n    function transferFrom(address from, address to, uint256 value) external returns (bool);\r\n\r\n    function totalSupply() external view returns (uint256);\r\n\r\n    function balanceOf(address who) external view returns (uint256);\r\n\r\n    function allowance(address owner, address spender) external view returns (uint256);\r\n\r\n    event Transfer(address indexed from, address indexed to, uint256 value);\r\n\r\n    event Approval(address indexed owner, address indexed spender, uint256 value);\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\token\\IERC20.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\token\\IERC20.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/token/IERC20.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/token/IERC20.sol",
     "exportedSymbols": {
       "IERC20": [
         6799
@@ -1019,7 +1019,7 @@
     "src": "0:795:47"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/token/IERC20.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/token/IERC20.sol",
     "exportedSymbols": {
       "IERC20": [
         6799
@@ -1861,5 +1861,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-22T17:36:20.232Z"
+  "updatedAt": "2022-02-24T15:34:39.589Z"
 }

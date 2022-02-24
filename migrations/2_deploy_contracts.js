@@ -95,7 +95,7 @@ module.exports = function (deployer, network, accounts) {
         .then((openingTime) => {
           const doomsDay = openingTime + 86400 * 240; // 240 days
           // const votingAddr = network === 'ropsten' ? SeedableVoting.address : Voting.address
-          if (network === 'ropsten') {
+          if (network === 'ropsten' || network === "development") {
             return deployer.deploy(
                 SeedableCrowdsale,
                 openingTime,
@@ -268,7 +268,7 @@ module.exports = function (deployer, network, accounts) {
           return reimbursementsInst.transferCrowdsaleKey(crowdsaleInstance.address);
         })
         .then(() => {
-          if (network === 'ropsten') {
+          if (network === 'ropsten' || network === "development" ) {
             console.log("WE MADE IT!!!");
             // console.log("voting", votingInstance)
             return seed(crowdsaleInstance, projectFactoryInst, inactiveTokenInstance, votingInstance, Project, developer, accounts[1], accounts[2]);

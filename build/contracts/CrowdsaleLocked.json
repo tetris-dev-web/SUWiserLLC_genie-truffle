@@ -53,9 +53,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title CrowdsaleLocked\r\n * @dev A CrowdsaleLocked contract can only be used by its crowdsale account (the one that created it)\r\n */\r\ncontract CrowdsaleLocked {\r\n    address private _crowdsale;\r\n\r\n    event CrowdsaleTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the crowdsale account to the one that is creating the CrowdsaleLocked contract.\r\n     */\r\n    constructor () internal {\r\n        _crowdsale = msg.sender;\r\n        emit CrowdsaleTransferred(_crowdsale);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the crowdsale.\r\n     */\r\n    modifier onlyCrowdsale() {\r\n        require(msg.sender == _crowdsale);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the crowdsale.\r\n     */\r\n    function crowdsale() public view returns (address) {\r\n        return _crowdsale;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new crowdsale.\r\n     * @param recipient The address of new crowdsale.\r\n     */\r\n    function transferCrowdsaleKey(address recipient) public onlyCrowdsale {\r\n        require(recipient != address(0));\r\n        _crowdsale = recipient;\r\n        emit CrowdsaleTransferred(_crowdsale);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_serge\\contracts\\utility\\CrowdsaleLocked.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\CrowdsaleLocked.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/CrowdsaleLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/CrowdsaleLocked.sol",
     "exportedSymbols": {
       "CrowdsaleLocked": [
         6210
@@ -844,7 +844,7 @@
     "src": "0:1232:32"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_serge/contracts/utility/CrowdsaleLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/CrowdsaleLocked.sol",
     "exportedSymbols": {
       "CrowdsaleLocked": [
         6210
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-22T18:24:47.025Z"
+  "updatedAt": "2022-02-24T16:38:29.011Z"
 }

@@ -50,7 +50,7 @@ const seed = async (_crowdsale, _projectFactory, _token, _voting, _projectContra
       );
       return await projectFactory.projectById.call(id);
     }
-
+    console.log('Ready to create Project');
     projAddr1 = await createProject(
       'HamInn',
       0,

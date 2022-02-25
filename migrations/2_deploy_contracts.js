@@ -124,7 +124,7 @@ module.exports = function (deployer, network, accounts) {
           )
         })
         .then(() => {
-          return network === 'ropsten' ?  SeedableCrowdsale.at(SeedableCrowdsale.address) : GNITokenCrowdsale.at(GNITokenCrowdsale.address);
+          return (network === 'ropsten' || network === 'development') ?  SeedableCrowdsale.at(SeedableCrowdsale.address) : GNITokenCrowdsale.at(GNITokenCrowdsale.address);
         })
         .then(_crowdsaleInstance => {
           crowdsaleInstance = _crowdsaleInstance

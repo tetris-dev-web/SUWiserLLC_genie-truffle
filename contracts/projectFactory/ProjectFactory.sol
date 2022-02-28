@@ -51,7 +51,7 @@ contract ProjectFactory is CrowdsaleLocked {
   ) external
     returns (address)
   {
-    require(msg.sender == developer);
+    // require(msg.sender == developer);
     (uint256 _developerTokens, uint256 _investorTokens) = GNITokenCrowdsale(crowdsale).mintNewProjectTokensAndExtendDoomsDay(_valuation, _capitalRequired);
 
     uint256 developerTokens = _developerTokens;

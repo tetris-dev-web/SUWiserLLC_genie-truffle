@@ -53,19 +53,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title ProjectFactoryLocked\r\n * @dev A ProjectFactoryLocked contract can only be used by its projectFactory account (the one that created it)\r\n */\r\ncontract ProjectFactoryLocked {\r\n    address private _projectFactory;\r\n\r\n    event ProjectFactoryTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the projectFactory account to the one that is creating the ProjectFactoryLocked contract.\r\n     */\r\n    constructor () internal {\r\n        _projectFactory = msg.sender;\r\n        emit ProjectFactoryTransferred(_projectFactory);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the projectFactory.\r\n     */\r\n    modifier onlyProjectFactory() {\r\n        require(msg.sender == _projectFactory);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the projectFactory.\r\n     */\r\n    function projectFactory() public view returns (address) {\r\n        return _projectFactory;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new projectFactory.\r\n     * @param recipient The address of new projectFactory.\r\n     */\r\n    function transferProjectFactoryKey(address recipient) public onlyProjectFactory {\r\n        require(recipient != address(0));\r\n        _projectFactory = recipient;\r\n        emit ProjectFactoryTransferred(_projectFactory);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\ProjectFactoryLocked.sol",
+  "sourcePath": "D:\\tetris\\SUWiserLLC_genie-truffle\\contracts\\utility\\ProjectFactoryLocked.sol",
   "ast": {
-    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/ProjectFactoryLocked.sol",
+    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/ProjectFactoryLocked.sol",
     "exportedSymbols": {
       "ProjectFactoryLocked": [
-        4617
+        4610
       ]
     },
-    "id": 4618,
+    "id": 4611,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4554,
+        "id": 4547,
         "literals": [
           "solidity",
           ">=",
@@ -84,19 +84,19 @@
         "contractKind": "contract",
         "documentation": "@title ProjectFactoryLocked\r\n@dev A ProjectFactoryLocked contract can only be used by its projectFactory account (the one that created it)\r",
         "fullyImplemented": true,
-        "id": 4617,
+        "id": 4610,
         "linearizedBaseContracts": [
-          4617
+          4610
         ],
         "name": "ProjectFactoryLocked",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4556,
+            "id": 4549,
             "name": "_projectFactory",
             "nodeType": "VariableDeclaration",
-            "scope": 4617,
+            "scope": 4610,
             "src": "229:31:24",
             "stateVariable": true,
             "storageLocation": "default",
@@ -105,7 +105,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 4555,
+              "id": 4548,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "229:7:24",
@@ -120,20 +120,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 4560,
+            "id": 4553,
             "name": "ProjectFactoryTransferred",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 4559,
+              "id": 4552,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4558,
+                  "id": 4551,
                   "indexed": false,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4560,
+                  "scope": 4553,
                   "src": "311:17:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -142,7 +142,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4557,
+                    "id": 4550,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "311:7:24",
@@ -161,25 +161,25 @@
           },
           {
             "body": {
-              "id": 4572,
+              "id": 4565,
               "nodeType": "Block",
               "src": "494:105:24",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4566,
+                    "id": 4559,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4563,
+                      "id": 4556,
                       "name": "_projectFactory",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4556,
+                      "referencedDeclaration": 4549,
                       "src": "505:15:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -192,18 +192,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 4564,
+                        "id": 4557,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5075,
+                        "referencedDeclaration": 5068,
                         "src": "523:3:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 4565,
+                      "id": 4558,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -223,7 +223,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 4567,
+                  "id": 4560,
                   "nodeType": "ExpressionStatement",
                   "src": "505:28:24"
                 },
@@ -233,11 +233,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4569,
+                        "id": 4562,
                         "name": "_projectFactory",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4556,
+                        "referencedDeclaration": 4549,
                         "src": "575:15:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -252,18 +252,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4568,
+                      "id": 4561,
                       "name": "ProjectFactoryTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4560,
+                      "referencedDeclaration": 4553,
                       "src": "549:25:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4570,
+                    "id": 4563,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -277,14 +277,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4571,
+                  "id": 4564,
                   "nodeType": "EmitStatement",
                   "src": "544:47:24"
                 }
               ]
             },
             "documentation": "@dev Sets the projectFactory account to the one that is creating the ProjectFactoryLocked contract.\r",
-            "id": 4573,
+            "id": 4566,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -292,19 +292,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4561,
+              "id": 4554,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "482:2:24"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4562,
+              "id": 4555,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "494:0:24"
             },
-            "scope": 4617,
+            "scope": 4610,
             "src": "470:129:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -312,7 +312,7 @@
           },
           {
             "body": {
-              "id": 4583,
+              "id": 4576,
               "nodeType": "Block",
               "src": "734:69:24",
               "statements": [
@@ -326,7 +326,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4579,
+                        "id": 4572,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -335,18 +335,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 4576,
+                            "id": 4569,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 5075,
+                            "referencedDeclaration": 5068,
                             "src": "753:3:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 4577,
+                          "id": 4570,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -364,11 +364,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 4578,
+                          "id": 4571,
                           "name": "_projectFactory",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4556,
+                          "referencedDeclaration": 4549,
                           "src": "767:15:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -389,21 +389,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4575,
+                      "id": 4568,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5078,
-                        5079
+                        5071,
+                        5072
                       ],
-                      "referencedDeclaration": 5078,
+                      "referencedDeclaration": 5071,
                       "src": "745:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4580,
+                    "id": 4573,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -417,23 +417,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4581,
+                  "id": 4574,
                   "nodeType": "ExpressionStatement",
                   "src": "745:38:24"
                 },
                 {
-                  "id": 4582,
+                  "id": 4575,
                   "nodeType": "PlaceholderStatement",
                   "src": "794:1:24"
                 }
               ]
             },
             "documentation": "@dev Reverts if called from any account other than the projectFactory.\r",
-            "id": 4584,
+            "id": 4577,
             "name": "onlyProjectFactory",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 4574,
+              "id": 4567,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "731:2:24"
@@ -443,33 +443,33 @@
           },
           {
             "body": {
-              "id": 4591,
+              "id": 4584,
               "nodeType": "Block",
               "src": "936:41:24",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4589,
+                    "id": 4582,
                     "name": "_projectFactory",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4556,
+                    "referencedDeclaration": 4549,
                     "src": "954:15:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 4588,
-                  "id": 4590,
+                  "functionReturnParameters": 4581,
+                  "id": 4583,
                   "nodeType": "Return",
                   "src": "947:22:24"
                 }
               ]
             },
             "documentation": "@return the address of the projectFactory.\r",
-            "id": 4592,
+            "id": 4585,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -477,22 +477,22 @@
             "name": "projectFactory",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4585,
+              "id": 4578,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "903:2:24"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4588,
+              "id": 4581,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4587,
+                  "id": 4580,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4592,
+                  "scope": 4585,
                   "src": "927:7:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -501,7 +501,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4586,
+                    "id": 4579,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "927:7:24",
@@ -516,7 +516,7 @@
               ],
               "src": "926:9:24"
             },
-            "scope": 4617,
+            "scope": 4610,
             "src": "880:97:24",
             "stateMutability": "view",
             "superFunction": null,
@@ -524,7 +524,7 @@
           },
           {
             "body": {
-              "id": 4615,
+              "id": 4608,
               "nodeType": "Block",
               "src": "1200:147:24",
               "statements": [
@@ -538,18 +538,18 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4604,
+                        "id": 4597,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 4600,
+                          "id": 4593,
                           "name": "recipient",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4594,
+                          "referencedDeclaration": 4587,
                           "src": "1219:9:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -564,7 +564,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 4602,
+                              "id": 4595,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -587,7 +587,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 4601,
+                            "id": 4594,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -600,7 +600,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 4603,
+                          "id": 4596,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -628,21 +628,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4599,
+                      "id": 4592,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5078,
-                        5079
+                        5071,
+                        5072
                       ],
-                      "referencedDeclaration": 5078,
+                      "referencedDeclaration": 5071,
                       "src": "1211:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4605,
+                    "id": 4598,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -656,25 +656,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4606,
+                  "id": 4599,
                   "nodeType": "ExpressionStatement",
                   "src": "1211:32:24"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4609,
+                    "id": 4602,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4607,
+                      "id": 4600,
                       "name": "_projectFactory",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4556,
+                      "referencedDeclaration": 4549,
                       "src": "1254:15:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -685,11 +685,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 4608,
+                      "id": 4601,
                       "name": "recipient",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4594,
+                      "referencedDeclaration": 4587,
                       "src": "1272:9:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -702,7 +702,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 4610,
+                  "id": 4603,
                   "nodeType": "ExpressionStatement",
                   "src": "1254:27:24"
                 },
@@ -712,11 +712,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4612,
+                        "id": 4605,
                         "name": "_projectFactory",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4556,
+                        "referencedDeclaration": 4549,
                         "src": "1323:15:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -731,18 +731,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4611,
+                      "id": 4604,
                       "name": "ProjectFactoryTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4560,
+                      "referencedDeclaration": 4553,
                       "src": "1297:25:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4613,
+                    "id": 4606,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -756,28 +756,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4614,
+                  "id": 4607,
                   "nodeType": "EmitStatement",
                   "src": "1292:47:24"
                 }
               ]
             },
             "documentation": "@dev Transfers contract to a new projectFactory.\r\n@param recipient The address of new projectFactory.\r",
-            "id": 4616,
+            "id": 4609,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 4597,
+                "id": 4590,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 4596,
+                  "id": 4589,
                   "name": "onlyProjectFactory",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4584,
+                  "referencedDeclaration": 4577,
                   "src": "1181:18:24",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -791,15 +791,15 @@
             "name": "transferProjectFactoryKey",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4595,
+              "id": 4588,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4594,
+                  "id": 4587,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4616,
+                  "scope": 4609,
                   "src": "1155:17:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -808,7 +808,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4593,
+                    "id": 4586,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1155:7:24",
@@ -825,36 +825,36 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 4598,
+              "id": 4591,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1200:0:24"
             },
-            "scope": 4617,
+            "scope": 4610,
             "src": "1120:227:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4618,
+        "scope": 4611,
         "src": "192:1158:24"
       }
     ],
     "src": "0:1352:24"
   },
   "legacyAST": {
-    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/ProjectFactoryLocked.sol",
+    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/ProjectFactoryLocked.sol",
     "exportedSymbols": {
       "ProjectFactoryLocked": [
-        4617
+        4610
       ]
     },
-    "id": 4618,
+    "id": 4611,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4554,
+        "id": 4547,
         "literals": [
           "solidity",
           ">=",
@@ -873,19 +873,19 @@
         "contractKind": "contract",
         "documentation": "@title ProjectFactoryLocked\r\n@dev A ProjectFactoryLocked contract can only be used by its projectFactory account (the one that created it)\r",
         "fullyImplemented": true,
-        "id": 4617,
+        "id": 4610,
         "linearizedBaseContracts": [
-          4617
+          4610
         ],
         "name": "ProjectFactoryLocked",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4556,
+            "id": 4549,
             "name": "_projectFactory",
             "nodeType": "VariableDeclaration",
-            "scope": 4617,
+            "scope": 4610,
             "src": "229:31:24",
             "stateVariable": true,
             "storageLocation": "default",
@@ -894,7 +894,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 4555,
+              "id": 4548,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "229:7:24",
@@ -909,20 +909,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 4560,
+            "id": 4553,
             "name": "ProjectFactoryTransferred",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 4559,
+              "id": 4552,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4558,
+                  "id": 4551,
                   "indexed": false,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4560,
+                  "scope": 4553,
                   "src": "311:17:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -931,7 +931,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4557,
+                    "id": 4550,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "311:7:24",
@@ -950,25 +950,25 @@
           },
           {
             "body": {
-              "id": 4572,
+              "id": 4565,
               "nodeType": "Block",
               "src": "494:105:24",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4566,
+                    "id": 4559,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4563,
+                      "id": 4556,
                       "name": "_projectFactory",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4556,
+                      "referencedDeclaration": 4549,
                       "src": "505:15:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -981,18 +981,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 4564,
+                        "id": 4557,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5075,
+                        "referencedDeclaration": 5068,
                         "src": "523:3:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 4565,
+                      "id": 4558,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1012,7 +1012,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 4567,
+                  "id": 4560,
                   "nodeType": "ExpressionStatement",
                   "src": "505:28:24"
                 },
@@ -1022,11 +1022,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4569,
+                        "id": 4562,
                         "name": "_projectFactory",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4556,
+                        "referencedDeclaration": 4549,
                         "src": "575:15:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1041,18 +1041,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4568,
+                      "id": 4561,
                       "name": "ProjectFactoryTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4560,
+                      "referencedDeclaration": 4553,
                       "src": "549:25:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4570,
+                    "id": 4563,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1066,14 +1066,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4571,
+                  "id": 4564,
                   "nodeType": "EmitStatement",
                   "src": "544:47:24"
                 }
               ]
             },
             "documentation": "@dev Sets the projectFactory account to the one that is creating the ProjectFactoryLocked contract.\r",
-            "id": 4573,
+            "id": 4566,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -1081,19 +1081,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4561,
+              "id": 4554,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "482:2:24"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4562,
+              "id": 4555,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "494:0:24"
             },
-            "scope": 4617,
+            "scope": 4610,
             "src": "470:129:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1101,7 +1101,7 @@
           },
           {
             "body": {
-              "id": 4583,
+              "id": 4576,
               "nodeType": "Block",
               "src": "734:69:24",
               "statements": [
@@ -1115,7 +1115,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4579,
+                        "id": 4572,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1124,18 +1124,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 4576,
+                            "id": 4569,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 5075,
+                            "referencedDeclaration": 5068,
                             "src": "753:3:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 4577,
+                          "id": 4570,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1153,11 +1153,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 4578,
+                          "id": 4571,
                           "name": "_projectFactory",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4556,
+                          "referencedDeclaration": 4549,
                           "src": "767:15:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1178,21 +1178,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4575,
+                      "id": 4568,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5078,
-                        5079
+                        5071,
+                        5072
                       ],
-                      "referencedDeclaration": 5078,
+                      "referencedDeclaration": 5071,
                       "src": "745:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4580,
+                    "id": 4573,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1206,23 +1206,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4581,
+                  "id": 4574,
                   "nodeType": "ExpressionStatement",
                   "src": "745:38:24"
                 },
                 {
-                  "id": 4582,
+                  "id": 4575,
                   "nodeType": "PlaceholderStatement",
                   "src": "794:1:24"
                 }
               ]
             },
             "documentation": "@dev Reverts if called from any account other than the projectFactory.\r",
-            "id": 4584,
+            "id": 4577,
             "name": "onlyProjectFactory",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 4574,
+              "id": 4567,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "731:2:24"
@@ -1232,33 +1232,33 @@
           },
           {
             "body": {
-              "id": 4591,
+              "id": 4584,
               "nodeType": "Block",
               "src": "936:41:24",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4589,
+                    "id": 4582,
                     "name": "_projectFactory",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4556,
+                    "referencedDeclaration": 4549,
                     "src": "954:15:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 4588,
-                  "id": 4590,
+                  "functionReturnParameters": 4581,
+                  "id": 4583,
                   "nodeType": "Return",
                   "src": "947:22:24"
                 }
               ]
             },
             "documentation": "@return the address of the projectFactory.\r",
-            "id": 4592,
+            "id": 4585,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1266,22 +1266,22 @@
             "name": "projectFactory",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4585,
+              "id": 4578,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "903:2:24"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4588,
+              "id": 4581,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4587,
+                  "id": 4580,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4592,
+                  "scope": 4585,
                   "src": "927:7:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1290,7 +1290,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4586,
+                    "id": 4579,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "927:7:24",
@@ -1305,7 +1305,7 @@
               ],
               "src": "926:9:24"
             },
-            "scope": 4617,
+            "scope": 4610,
             "src": "880:97:24",
             "stateMutability": "view",
             "superFunction": null,
@@ -1313,7 +1313,7 @@
           },
           {
             "body": {
-              "id": 4615,
+              "id": 4608,
               "nodeType": "Block",
               "src": "1200:147:24",
               "statements": [
@@ -1327,18 +1327,18 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4604,
+                        "id": 4597,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 4600,
+                          "id": 4593,
                           "name": "recipient",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4594,
+                          "referencedDeclaration": 4587,
                           "src": "1219:9:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1353,7 +1353,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 4602,
+                              "id": 4595,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1376,7 +1376,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 4601,
+                            "id": 4594,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1389,7 +1389,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 4603,
+                          "id": 4596,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1417,21 +1417,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4599,
+                      "id": 4592,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5078,
-                        5079
+                        5071,
+                        5072
                       ],
-                      "referencedDeclaration": 5078,
+                      "referencedDeclaration": 5071,
                       "src": "1211:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4605,
+                    "id": 4598,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1445,25 +1445,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4606,
+                  "id": 4599,
                   "nodeType": "ExpressionStatement",
                   "src": "1211:32:24"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4609,
+                    "id": 4602,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4607,
+                      "id": 4600,
                       "name": "_projectFactory",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4556,
+                      "referencedDeclaration": 4549,
                       "src": "1254:15:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1474,11 +1474,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 4608,
+                      "id": 4601,
                       "name": "recipient",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4594,
+                      "referencedDeclaration": 4587,
                       "src": "1272:9:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1491,7 +1491,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 4610,
+                  "id": 4603,
                   "nodeType": "ExpressionStatement",
                   "src": "1254:27:24"
                 },
@@ -1501,11 +1501,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4612,
+                        "id": 4605,
                         "name": "_projectFactory",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4556,
+                        "referencedDeclaration": 4549,
                         "src": "1323:15:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1520,18 +1520,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4611,
+                      "id": 4604,
                       "name": "ProjectFactoryTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4560,
+                      "referencedDeclaration": 4553,
                       "src": "1297:25:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4613,
+                    "id": 4606,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1545,28 +1545,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4614,
+                  "id": 4607,
                   "nodeType": "EmitStatement",
                   "src": "1292:47:24"
                 }
               ]
             },
             "documentation": "@dev Transfers contract to a new projectFactory.\r\n@param recipient The address of new projectFactory.\r",
-            "id": 4616,
+            "id": 4609,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 4597,
+                "id": 4590,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 4596,
+                  "id": 4589,
                   "name": "onlyProjectFactory",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4584,
+                  "referencedDeclaration": 4577,
                   "src": "1181:18:24",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1580,15 +1580,15 @@
             "name": "transferProjectFactoryKey",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4595,
+              "id": 4588,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4594,
+                  "id": 4587,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4616,
+                  "scope": 4609,
                   "src": "1155:17:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1597,7 +1597,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4593,
+                    "id": 4586,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1155:7:24",
@@ -1614,19 +1614,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 4598,
+              "id": 4591,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1200:0:24"
             },
-            "scope": 4617,
+            "scope": 4610,
             "src": "1120:227:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4618,
+        "scope": 4611,
         "src": "192:1158:24"
       }
     ],
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-25T04:16:47.654Z"
+  "updatedAt": "2022-02-28T19:22:16.607Z"
 }

@@ -1,4 +1,4 @@
-const { web3, dotenv } = require('../server/chain_connection/web3_configuration');
+const { web3, dotenv } = require('./web3_configuration');
 
 const seed = async (
   _crowdsale,

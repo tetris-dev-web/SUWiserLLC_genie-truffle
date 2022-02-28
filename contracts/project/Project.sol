@@ -131,7 +131,7 @@ contract Project is Ownable, Secondary {
 
   function activate () external onlyPrimary returns(uint256) {
     active = true;
-    activationTime = block.number;
+    activationTime = block.timestamp;
     return activationTime;
   }
 }

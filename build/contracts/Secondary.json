@@ -53,9 +53,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title Secondary\r\n * @dev A Secondary contract can only be used by its primary account (the one that created it)\r\n */\r\ncontract Secondary {\r\n    address private _primary;\r\n\r\n    event PrimaryTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the primary account to the one that is creating the Secondary contract.\r\n     */\r\n    constructor () internal {\r\n        _primary = msg.sender;\r\n        emit PrimaryTransferred(_primary);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the primary.\r\n     */\r\n    modifier onlyPrimary() {\r\n        require(msg.sender == _primary);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the primary.\r\n     */\r\n    function primary() public view returns (address) {\r\n        return _primary;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new primary.\r\n     * @param recipient The address of new primary.\r\n     */\r\n    function transferPrimary(address recipient) public onlyPrimary {\r\n        require(recipient != address(0));\r\n        _primary = recipient;\r\n        emit PrimaryTransferred(_primary);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\Secondary.sol",
+  "sourcePath": "D:\\tetris\\SUWiserLLC_genie-truffle\\contracts\\utility\\Secondary.sol",
   "ast": {
-    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/Secondary.sol",
+    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/Secondary.sol",
     "exportedSymbols": {
       "Secondary": [
         8955
@@ -844,7 +844,7 @@
     "src": "0:1165:62"
   },
   "legacyAST": {
-    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/Secondary.sol",
+    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/Secondary.sol",
     "exportedSymbols": {
       "Secondary": [
         8955
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-03-02T14:36:03.270Z"
+  "updatedAt": "2022-03-02T15:08:16.471Z"
 }

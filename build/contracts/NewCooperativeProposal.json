@@ -116,24 +116,24 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516020806106ba83398101806040528101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506105f6806100c46000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820d3cd3e773a931afc9e794ad8a82e92666a48baf7f2f58e43f01aed095b107bee0029",
-  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820d3cd3e773a931afc9e794ad8a82e92666a48baf7f2f58e43f01aed095b107bee0029",
-  "sourceMap": "126:287:12:-;;;210:90;8:9:-1;5:2;;;30:1;27;20:12;5:2;210:90:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;607:10:33;599:5;;:18;;;;;;;;;;;;;;;;;;279:15:12;262:14;;:32;;;;;;;;;;;;;;;;;;210:90;126:287;;;;;;",
-  "deployedSourceMap": "126:287:12:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:114:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1128:114:33;;;;;;255:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;255:20:33;;;;;;;;;;;;;;;;;;;;;;;;;;;784:74;;8:9:-1;5:2;;;30:1;27;20:12;5:2;784:74:33;;;;;;;;;;;;;;;;;;;;;;;;;;;306:104:12;;8:9:-1;5:2;;;30:1;27;20:12;5:2;306:104:12;;;;;;174:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;174:29:12;;;;;;;;;;;;;;;;;;;;;;;;;;;1430:121:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1430:121:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:114;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1205:5;;;;;;;;;;;1186:25;;;;;;;;;;;;1234:1;1218:5;;:18;;;;;;;;;;;;;;;;;;1128:114::o;255:20::-;;;;;;;;;;;;;:::o;784:74::-;824:7;847:5;;;;;;;;;;;840:12;;784:74;:::o;306:104:12:-;362:5;;;;;;;;;;;349:39;;;389:14;;;;;;;;;;;349:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;349:55:12;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;349:55:12;;;;306:104::o;174:29::-;;;;;;;;;;;;;:::o;1430:121:33:-;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1508:1;1500:5;:9;;;;1516:29;1535:9;1516:18;:29::i;:::-;1430:121;:::o;1692:175::-;1784:1;1763:23;;:9;:23;;;;1755:32;;;;;;;;1827:9;1799:38;;1820:5;;;;;;;;;;;1799:38;;;;;;;;;;;;1852:9;1844:5;;:17;;;;;;;;;;;;;;;;;;1692:175;:::o",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806106ba83398101806040528101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506105f6806100c46000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820be5017c707e65982566b71d78b74300ff246304d6f27fb0b6a5fbe7f3a5e16d20029",
+  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a61461007d5780638da5cb5b14610094578063b2bdfa7b146100eb578063be3d50ec14610142578063cb0fc30a14610159578063f2fde38b146101b0575b600080fd5b34801561008957600080fd5b506100926101f3565b005b3480156100a057600080fd5b506100a96102f5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100f757600080fd5b5061010061031a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561014e57600080fd5b50610157610343565b005b34801561016557600080fd5b5061016e61043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101bc57600080fd5b506101f1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610461565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663690b26f4600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801561042157600080fd5b505af1158015610435573d6000803e3d6000fd5b50505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104bc57600080fd5b60056001819055506104cd816104d0565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561050c57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820be5017c707e65982566b71d78b74300ff246304d6f27fb0b6a5fbe7f3a5e16d20029",
+  "sourceMap": "126:287:17:-;;;210:90;8:9:-1;5:2;;;30:1;27;20:12;5:2;210:90:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;607:10:58;599:5;;:18;;;;;;;;;;;;;;;;;;279:15:17;262:14;;:32;;;;;;;;;;;;;;;;;;210:90;126:287;;;;;;",
+  "deployedSourceMap": "126:287:17:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:114:58;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1128:114:58;;;;;;255:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;255:20:58;;;;;;;;;;;;;;;;;;;;;;;;;;;784:74;;8:9:-1;5:2;;;30:1;27;20:12;5:2;784:74:58;;;;;;;;;;;;;;;;;;;;;;;;;;;306:104:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;306:104:17;;;;;;174:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;174:29:17;;;;;;;;;;;;;;;;;;;;;;;;;;;1430:121:58;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1430:121:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:114;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1205:5;;;;;;;;;;;1186:25;;;;;;;;;;;;1234:1;1218:5;;:18;;;;;;;;;;;;;;;;;;1128:114::o;255:20::-;;;;;;;;;;;;;:::o;784:74::-;824:7;847:5;;;;;;;;;;;840:12;;784:74;:::o;306:104:17:-;362:5;;;;;;;;;;;349:39;;;389:14;;;;;;;;;;;349:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;349:55:17;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;349:55:17;;;;306:104::o;174:29::-;;;;;;;;;;;;;:::o;1430:121:58:-;758:5;;;;;;;;;;;744:19;;:10;:19;;;736:28;;;;;;;;1508:1;1500:5;:9;;;;1516:29;1535:9;1516:18;:29::i;:::-;1430:121;:::o;1692:175::-;1784:1;1763:23;;:9;:23;;;;1755:32;;;;;;;;1827:9;1799:38;;1820:5;;;;;;;;;;;1799:38;;;;;;;;;;;;1852:9;1844:5;;:17;;;;;;;;;;;;;;;;;;1692:175;:::o",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\nimport './Amendment.sol';\r\nimport './utility/Ownable.sol';\r\nimport './Cooperative0.sol';\r\n\r\ncontract NewCooperativeProposal is Ownable {\r\n  address public newCooperative;\r\n\r\n  constructor (address _newCooperative) public {\r\n    newCooperative = _newCooperative;\r\n  }\r\n\r\n  function executeAmendment () public {\r\n    Cooperative0(owner).adoptNewCooperative(newCooperative);\r\n  }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_genie-truffle\\contracts\\NewCooperativeProposal.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\NewCooperativeProposal.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/NewCooperativeProposal.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/NewCooperativeProposal.sol",
     "exportedSymbols": {
       "NewCooperativeProposal": [
-        1739
+        2168
       ]
     },
-    "id": 1740,
+    "id": 2169,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1710,
+        "id": 2139,
         "literals": [
           "solidity",
           ">=",
@@ -144,38 +144,38 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:12"
+        "src": "0:32:17"
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/Amendment.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/Amendment.sol",
         "file": "./Amendment.sol",
-        "id": 1711,
+        "id": 2140,
         "nodeType": "ImportDirective",
-        "scope": 1740,
+        "scope": 2169,
         "sourceUnit": 128,
-        "src": "34:25:12",
+        "src": "34:25:17",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/Ownable.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/Ownable.sol",
         "file": "./utility/Ownable.sol",
-        "id": 1712,
+        "id": 2141,
         "nodeType": "ImportDirective",
-        "scope": 1740,
-        "sourceUnit": 6304,
-        "src": "61:31:12",
+        "scope": 2169,
+        "sourceUnit": 8672,
+        "src": "61:31:17",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/Cooperative0.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/Cooperative0.sol",
         "file": "./Cooperative0.sol",
-        "id": 1713,
+        "id": 2142,
         "nodeType": "ImportDirective",
-        "scope": 1740,
-        "sourceUnit": 1386,
-        "src": "94:28:12",
+        "scope": 2169,
+        "sourceUnit": 1543,
+        "src": "94:28:17",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -185,42 +185,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1714,
+              "id": 2143,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 6303,
-              "src": "161:7:12",
+              "referencedDeclaration": 8671,
+              "src": "161:7:17",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$6303",
+                "typeIdentifier": "t_contract$_Ownable_$8671",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 1715,
+            "id": 2144,
             "nodeType": "InheritanceSpecifier",
-            "src": "161:7:12"
+            "src": "161:7:17"
           }
         ],
         "contractDependencies": [
-          6303
+          8671
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1739,
+        "id": 2168,
         "linearizedBaseContracts": [
-          1739,
-          6303
+          2168,
+          8671
         ],
         "name": "NewCooperativeProposal",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1717,
+            "id": 2146,
             "name": "newCooperative",
             "nodeType": "VariableDeclaration",
-            "scope": 1739,
-            "src": "174:29:12",
+            "scope": 2168,
+            "src": "174:29:17",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -228,10 +228,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 1716,
+              "id": 2145,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "174:7:12",
+              "src": "174:7:17",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -242,26 +242,26 @@
           },
           {
             "body": {
-              "id": 1726,
+              "id": 2155,
               "nodeType": "Block",
-              "src": "255:45:12",
+              "src": "255:45:17",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1724,
+                    "id": 2153,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1722,
+                      "id": 2151,
                       "name": "newCooperative",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1717,
-                      "src": "262:14:12",
+                      "referencedDeclaration": 2146,
+                      "src": "262:14:17",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -271,31 +271,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1723,
+                      "id": 2152,
                       "name": "_newCooperative",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1719,
-                      "src": "279:15:12",
+                      "referencedDeclaration": 2148,
+                      "src": "279:15:17",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "262:32:12",
+                    "src": "262:32:17",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 1725,
+                  "id": 2154,
                   "nodeType": "ExpressionStatement",
-                  "src": "262:32:12"
+                  "src": "262:32:17"
                 }
               ]
             },
             "documentation": null,
-            "id": 1727,
+            "id": 2156,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -303,16 +303,16 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1720,
+              "id": 2149,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1719,
+                  "id": 2148,
                   "name": "_newCooperative",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1727,
-                  "src": "223:23:12",
+                  "scope": 2156,
+                  "src": "223:23:17",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -320,10 +320,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1718,
+                    "id": 2147,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "223:7:12",
+                    "src": "223:7:17",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -333,26 +333,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "222:25:12"
+              "src": "222:25:17"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1721,
+              "id": 2150,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "255:0:12"
+              "src": "255:0:17"
             },
-            "scope": 1739,
-            "src": "210:90:12",
+            "scope": 2168,
+            "src": "210:90:17",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1737,
+              "id": 2166,
               "nodeType": "Block",
-              "src": "342:68:12",
+              "src": "342:68:17",
               "statements": [
                 {
                   "expression": {
@@ -360,12 +360,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1734,
+                        "id": 2163,
                         "name": "newCooperative",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1717,
-                        "src": "389:14:12",
+                        "referencedDeclaration": 2146,
+                        "src": "389:14:17",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -384,12 +384,12 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1731,
+                            "id": 2160,
                             "name": "owner",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6207,
-                            "src": "362:5:12",
+                            "referencedDeclaration": 8575,
+                            "src": "362:5:17",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -403,18 +403,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 1730,
+                          "id": 2159,
                           "name": "Cooperative0",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1385,
-                          "src": "349:12:12",
+                          "referencedDeclaration": 1542,
+                          "src": "349:12:17",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_Cooperative0_$1385_$",
+                            "typeIdentifier": "t_type$_t_contract$_Cooperative0_$1542_$",
                             "typeString": "type(contract Cooperative0)"
                           }
                         },
-                        "id": 1732,
+                        "id": 2161,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -422,27 +422,27 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "349:19:12",
+                        "src": "349:19:17",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Cooperative0_$1385",
+                          "typeIdentifier": "t_contract$_Cooperative0_$1542",
                           "typeString": "contract Cooperative0"
                         }
                       },
-                      "id": 1733,
+                      "id": 2162,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "adoptNewCooperative",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1119,
-                      "src": "349:39:12",
+                      "referencedDeclaration": 1276,
+                      "src": "349:39:17",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 1735,
+                    "id": 2164,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -450,20 +450,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "349:55:12",
+                    "src": "349:55:17",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1736,
+                  "id": 2165,
                   "nodeType": "ExpressionStatement",
-                  "src": "349:55:12"
+                  "src": "349:55:17"
                 }
               ]
             },
             "documentation": null,
-            "id": 1738,
+            "id": 2167,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -471,43 +471,43 @@
             "name": "executeAmendment",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1728,
+              "id": 2157,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "332:2:12"
+              "src": "332:2:17"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1729,
+              "id": 2158,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "342:0:12"
+              "src": "342:0:17"
             },
-            "scope": 1739,
-            "src": "306:104:12",
+            "scope": 2168,
+            "src": "306:104:17",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1740,
-        "src": "126:287:12"
+        "scope": 2169,
+        "src": "126:287:17"
       }
     ],
-    "src": "0:415:12"
+    "src": "0:415:17"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/NewCooperativeProposal.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/NewCooperativeProposal.sol",
     "exportedSymbols": {
       "NewCooperativeProposal": [
-        1739
+        2168
       ]
     },
-    "id": 1740,
+    "id": 2169,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1710,
+        "id": 2139,
         "literals": [
           "solidity",
           ">=",
@@ -518,38 +518,38 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:12"
+        "src": "0:32:17"
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/Amendment.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/Amendment.sol",
         "file": "./Amendment.sol",
-        "id": 1711,
+        "id": 2140,
         "nodeType": "ImportDirective",
-        "scope": 1740,
+        "scope": 2169,
         "sourceUnit": 128,
-        "src": "34:25:12",
+        "src": "34:25:17",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/Ownable.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/Ownable.sol",
         "file": "./utility/Ownable.sol",
-        "id": 1712,
+        "id": 2141,
         "nodeType": "ImportDirective",
-        "scope": 1740,
-        "sourceUnit": 6304,
-        "src": "61:31:12",
+        "scope": 2169,
+        "sourceUnit": 8672,
+        "src": "61:31:17",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/Cooperative0.sol",
+        "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/Cooperative0.sol",
         "file": "./Cooperative0.sol",
-        "id": 1713,
+        "id": 2142,
         "nodeType": "ImportDirective",
-        "scope": 1740,
-        "sourceUnit": 1386,
-        "src": "94:28:12",
+        "scope": 2169,
+        "sourceUnit": 1543,
+        "src": "94:28:17",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -559,42 +559,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1714,
+              "id": 2143,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 6303,
-              "src": "161:7:12",
+              "referencedDeclaration": 8671,
+              "src": "161:7:17",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$6303",
+                "typeIdentifier": "t_contract$_Ownable_$8671",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 1715,
+            "id": 2144,
             "nodeType": "InheritanceSpecifier",
-            "src": "161:7:12"
+            "src": "161:7:17"
           }
         ],
         "contractDependencies": [
-          6303
+          8671
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1739,
+        "id": 2168,
         "linearizedBaseContracts": [
-          1739,
-          6303
+          2168,
+          8671
         ],
         "name": "NewCooperativeProposal",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1717,
+            "id": 2146,
             "name": "newCooperative",
             "nodeType": "VariableDeclaration",
-            "scope": 1739,
-            "src": "174:29:12",
+            "scope": 2168,
+            "src": "174:29:17",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -602,10 +602,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 1716,
+              "id": 2145,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "174:7:12",
+              "src": "174:7:17",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -616,26 +616,26 @@
           },
           {
             "body": {
-              "id": 1726,
+              "id": 2155,
               "nodeType": "Block",
-              "src": "255:45:12",
+              "src": "255:45:17",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1724,
+                    "id": 2153,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1722,
+                      "id": 2151,
                       "name": "newCooperative",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1717,
-                      "src": "262:14:12",
+                      "referencedDeclaration": 2146,
+                      "src": "262:14:17",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -645,31 +645,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1723,
+                      "id": 2152,
                       "name": "_newCooperative",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1719,
-                      "src": "279:15:12",
+                      "referencedDeclaration": 2148,
+                      "src": "279:15:17",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "262:32:12",
+                    "src": "262:32:17",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 1725,
+                  "id": 2154,
                   "nodeType": "ExpressionStatement",
-                  "src": "262:32:12"
+                  "src": "262:32:17"
                 }
               ]
             },
             "documentation": null,
-            "id": 1727,
+            "id": 2156,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -677,16 +677,16 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1720,
+              "id": 2149,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1719,
+                  "id": 2148,
                   "name": "_newCooperative",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1727,
-                  "src": "223:23:12",
+                  "scope": 2156,
+                  "src": "223:23:17",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -694,10 +694,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1718,
+                    "id": 2147,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "223:7:12",
+                    "src": "223:7:17",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -707,26 +707,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "222:25:12"
+              "src": "222:25:17"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1721,
+              "id": 2150,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "255:0:12"
+              "src": "255:0:17"
             },
-            "scope": 1739,
-            "src": "210:90:12",
+            "scope": 2168,
+            "src": "210:90:17",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1737,
+              "id": 2166,
               "nodeType": "Block",
-              "src": "342:68:12",
+              "src": "342:68:17",
               "statements": [
                 {
                   "expression": {
@@ -734,12 +734,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1734,
+                        "id": 2163,
                         "name": "newCooperative",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1717,
-                        "src": "389:14:12",
+                        "referencedDeclaration": 2146,
+                        "src": "389:14:17",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -758,12 +758,12 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1731,
+                            "id": 2160,
                             "name": "owner",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6207,
-                            "src": "362:5:12",
+                            "referencedDeclaration": 8575,
+                            "src": "362:5:17",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -777,18 +777,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 1730,
+                          "id": 2159,
                           "name": "Cooperative0",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1385,
-                          "src": "349:12:12",
+                          "referencedDeclaration": 1542,
+                          "src": "349:12:17",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_Cooperative0_$1385_$",
+                            "typeIdentifier": "t_type$_t_contract$_Cooperative0_$1542_$",
                             "typeString": "type(contract Cooperative0)"
                           }
                         },
-                        "id": 1732,
+                        "id": 2161,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -796,27 +796,27 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "349:19:12",
+                        "src": "349:19:17",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Cooperative0_$1385",
+                          "typeIdentifier": "t_contract$_Cooperative0_$1542",
                           "typeString": "contract Cooperative0"
                         }
                       },
-                      "id": 1733,
+                      "id": 2162,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "adoptNewCooperative",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1119,
-                      "src": "349:39:12",
+                      "referencedDeclaration": 1276,
+                      "src": "349:39:17",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 1735,
+                    "id": 2164,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -824,20 +824,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "349:55:12",
+                    "src": "349:55:17",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1736,
+                  "id": 2165,
                   "nodeType": "ExpressionStatement",
-                  "src": "349:55:12"
+                  "src": "349:55:17"
                 }
               ]
             },
             "documentation": null,
-            "id": 1738,
+            "id": 2167,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -845,30 +845,30 @@
             "name": "executeAmendment",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1728,
+              "id": 2157,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "332:2:12"
+              "src": "332:2:17"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1729,
+              "id": 2158,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "342:0:12"
+              "src": "342:0:17"
             },
-            "scope": 1739,
-            "src": "306:104:12",
+            "scope": 2168,
+            "src": "306:104:17",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1740,
-        "src": "126:287:12"
+        "scope": 2169,
+        "src": "126:287:17"
       }
     ],
-    "src": "0:415:12"
+    "src": "0:415:17"
   },
   "compiler": {
     "name": "solc",
@@ -876,5 +876,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-28T19:20:03.023Z"
+  "updatedAt": "2022-03-02T14:36:03.195Z"
 }

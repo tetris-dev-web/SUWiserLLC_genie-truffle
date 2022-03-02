@@ -53,19 +53,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.6.0;\r\n\r\n/**\r\n * @title VotingLocked\r\n * @dev A VotingLocked contract can only be used by its voting account (the one that created it)\r\n */\r\ncontract VotingLocked {\r\n    address private _voting;\r\n\r\n    event VotingTransferred(\r\n        address recipient\r\n    );\r\n\r\n    /**\r\n     * @dev Sets the voting account to the one that is creating the VotingLocked contract.\r\n     */\r\n    constructor () internal {\r\n        _voting = msg.sender;\r\n        emit VotingTransferred(_voting);\r\n    }\r\n\r\n    /**\r\n     * @dev Reverts if called from any account other than the voting.\r\n     */\r\n    modifier onlyVoting() {\r\n        require(msg.sender == _voting);\r\n        _;\r\n    }\r\n\r\n    /**\r\n     * @return the address of the voting.\r\n     */\r\n    function voting() public view returns (address) {\r\n        return _voting;\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers contract to a new voting.\r\n     * @param recipient The address of new voting.\r\n     */\r\n    function transferVotingKey(address recipient) public onlyVoting {\r\n        require(recipient != address(0));\r\n        _voting = recipient;\r\n        emit VotingTransferred(_voting);\r\n    }\r\n}\r\n",
-  "sourcePath": "D:\\tetris\\SUWiserLLC_genie-truffle\\contracts\\utility\\VotingLocked.sol",
+  "sourcePath": "D:\\Projects\\SUWiserLLC\\truffle\\contracts\\utility\\VotingLocked.sol",
   "ast": {
-    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/VotingLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/VotingLocked.sol",
     "exportedSymbols": {
       "VotingLocked": [
-        4834
+        9085
       ]
     },
-    "id": 4835,
+    "id": 9086,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4771,
+        "id": 9022,
         "literals": [
           "solidity",
           ">=",
@@ -76,7 +76,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:27"
+        "src": "0:32:64"
       },
       {
         "baseContracts": [],
@@ -84,20 +84,20 @@
         "contractKind": "contract",
         "documentation": "@title VotingLocked\r\n@dev A VotingLocked contract can only be used by its voting account (the one that created it)\r",
         "fullyImplemented": true,
-        "id": 4834,
+        "id": 9085,
         "linearizedBaseContracts": [
-          4834
+          9085
         ],
         "name": "VotingLocked",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4773,
+            "id": 9024,
             "name": "_voting",
             "nodeType": "VariableDeclaration",
-            "scope": 4834,
-            "src": "197:23:27",
+            "scope": 9085,
+            "src": "197:23:64",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -105,10 +105,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 4772,
+              "id": 9023,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "197:7:27",
+              "src": "197:7:64",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -120,21 +120,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 4777,
+            "id": 9028,
             "name": "VotingTransferred",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 4776,
+              "id": 9027,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4775,
+                  "id": 9026,
                   "indexed": false,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4777,
-                  "src": "263:17:27",
+                  "scope": 9028,
+                  "src": "263:17:64",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -142,10 +142,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4774,
+                    "id": 9025,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "263:7:27",
+                    "src": "263:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -155,32 +155,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "252:35:27"
+              "src": "252:35:64"
             },
-            "src": "229:59:27"
+            "src": "229:59:64"
           },
           {
             "body": {
-              "id": 4789,
+              "id": 9040,
               "nodeType": "Block",
-              "src": "430:81:27",
+              "src": "430:81:64",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4783,
+                    "id": 9034,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4780,
+                      "id": 9031,
                       "name": "_voting",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4773,
-                      "src": "441:7:27",
+                      "referencedDeclaration": 9024,
+                      "src": "441:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -192,18 +192,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 4781,
+                        "id": 9032,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5068,
-                        "src": "451:3:27",
+                        "referencedDeclaration": 9390,
+                        "src": "451:3:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 4782,
+                      "id": 9033,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -211,21 +211,21 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "451:10:27",
+                      "src": "451:10:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "441:20:27",
+                    "src": "441:20:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 4784,
+                  "id": 9035,
                   "nodeType": "ExpressionStatement",
-                  "src": "441:20:27"
+                  "src": "441:20:64"
                 },
                 {
                   "eventCall": {
@@ -233,12 +233,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4786,
+                        "id": 9037,
                         "name": "_voting",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4773,
-                        "src": "495:7:27",
+                        "referencedDeclaration": 9024,
+                        "src": "495:7:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -252,18 +252,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4785,
+                      "id": 9036,
                       "name": "VotingTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4777,
-                      "src": "477:17:27",
+                      "referencedDeclaration": 9028,
+                      "src": "477:17:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4787,
+                    "id": 9038,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -271,20 +271,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "477:26:27",
+                    "src": "477:26:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4788,
+                  "id": 9039,
                   "nodeType": "EmitStatement",
-                  "src": "472:31:27"
+                  "src": "472:31:64"
                 }
               ]
             },
             "documentation": "@dev Sets the voting account to the one that is creating the VotingLocked contract.\r",
-            "id": 4790,
+            "id": 9041,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -292,29 +292,29 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4778,
+              "id": 9029,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "418:2:27"
+              "src": "418:2:64"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4779,
+              "id": 9030,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "430:0:27"
+              "src": "430:0:64"
             },
-            "scope": 4834,
-            "src": "406:105:27",
+            "scope": 9085,
+            "src": "406:105:64",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 4800,
+              "id": 9051,
               "nodeType": "Block",
-              "src": "630:61:27",
+              "src": "630:61:64",
               "statements": [
                 {
                   "expression": {
@@ -326,7 +326,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4796,
+                        "id": 9047,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -335,18 +335,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 4793,
+                            "id": 9044,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 5068,
-                            "src": "649:3:27",
+                            "referencedDeclaration": 9390,
+                            "src": "649:3:64",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 4794,
+                          "id": 9045,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -354,7 +354,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "649:10:27",
+                          "src": "649:10:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -364,18 +364,18 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 4795,
+                          "id": 9046,
                           "name": "_voting",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4773,
-                          "src": "663:7:27",
+                          "referencedDeclaration": 9024,
+                          "src": "663:7:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "649:21:27",
+                        "src": "649:21:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -389,21 +389,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4792,
+                      "id": 9043,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5071,
-                        5072
+                        9393,
+                        9394
                       ],
-                      "referencedDeclaration": 5071,
-                      "src": "641:7:27",
+                      "referencedDeclaration": 9393,
+                      "src": "641:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4797,
+                    "id": 9048,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -411,65 +411,65 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "641:30:27",
+                    "src": "641:30:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4798,
+                  "id": 9049,
                   "nodeType": "ExpressionStatement",
-                  "src": "641:30:27"
+                  "src": "641:30:64"
                 },
                 {
-                  "id": 4799,
+                  "id": 9050,
                   "nodeType": "PlaceholderStatement",
-                  "src": "682:1:27"
+                  "src": "682:1:64"
                 }
               ]
             },
             "documentation": "@dev Reverts if called from any account other than the voting.\r",
-            "id": 4801,
+            "id": 9052,
             "name": "onlyVoting",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 4791,
+              "id": 9042,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "627:2:27"
+              "src": "627:2:64"
             },
-            "src": "608:83:27",
+            "src": "608:83:64",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 4808,
+              "id": 9059,
               "nodeType": "Block",
-              "src": "808:33:27",
+              "src": "808:33:64",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4806,
+                    "id": 9057,
                     "name": "_voting",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4773,
-                    "src": "826:7:27",
+                    "referencedDeclaration": 9024,
+                    "src": "826:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 4805,
-                  "id": 4807,
+                  "functionReturnParameters": 9056,
+                  "id": 9058,
                   "nodeType": "Return",
-                  "src": "819:14:27"
+                  "src": "819:14:64"
                 }
               ]
             },
             "documentation": "@return the address of the voting.\r",
-            "id": 4809,
+            "id": 9060,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -477,23 +477,23 @@
             "name": "voting",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4802,
+              "id": 9053,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "775:2:27"
+              "src": "775:2:64"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4805,
+              "id": 9056,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4804,
+                  "id": 9055,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4809,
-                  "src": "799:7:27",
+                  "scope": 9060,
+                  "src": "799:7:64",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -501,10 +501,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4803,
+                    "id": 9054,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "799:7:27",
+                    "src": "799:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -514,19 +514,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "798:9:27"
+              "src": "798:9:64"
             },
-            "scope": 4834,
-            "src": "760:81:27",
+            "scope": 9085,
+            "src": "760:81:64",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 4832,
+              "id": 9083,
               "nodeType": "Block",
-              "src": "1032:123:27",
+              "src": "1032:123:64",
               "statements": [
                 {
                   "expression": {
@@ -538,19 +538,19 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4821,
+                        "id": 9072,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 4817,
+                          "id": 9068,
                           "name": "recipient",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4811,
-                          "src": "1051:9:27",
+                          "referencedDeclaration": 9062,
+                          "src": "1051:9:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -564,14 +564,14 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 4819,
+                              "id": 9070,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "number",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "1072:1:27",
+                              "src": "1072:1:64",
                               "subdenomination": null,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_rational_0_by_1",
@@ -587,20 +587,20 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 4818,
+                            "id": 9069,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "1064:7:27",
+                            "src": "1064:7:64",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_address_$",
                               "typeString": "type(address)"
                             },
                             "typeName": "address"
                           },
-                          "id": 4820,
+                          "id": 9071,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -608,13 +608,13 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1064:10:27",
+                          "src": "1064:10:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "1051:23:27",
+                        "src": "1051:23:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -628,21 +628,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4816,
+                      "id": 9067,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5071,
-                        5072
+                        9393,
+                        9394
                       ],
-                      "referencedDeclaration": 5071,
-                      "src": "1043:7:27",
+                      "referencedDeclaration": 9393,
+                      "src": "1043:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4822,
+                    "id": 9073,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -650,32 +650,32 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1043:32:27",
+                    "src": "1043:32:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4823,
+                  "id": 9074,
                   "nodeType": "ExpressionStatement",
-                  "src": "1043:32:27"
+                  "src": "1043:32:64"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4826,
+                    "id": 9077,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4824,
+                      "id": 9075,
                       "name": "_voting",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4773,
-                      "src": "1086:7:27",
+                      "referencedDeclaration": 9024,
+                      "src": "1086:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -685,26 +685,26 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 4825,
+                      "id": 9076,
                       "name": "recipient",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4811,
-                      "src": "1096:9:27",
+                      "referencedDeclaration": 9062,
+                      "src": "1096:9:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1086:19:27",
+                    "src": "1086:19:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 4827,
+                  "id": 9078,
                   "nodeType": "ExpressionStatement",
-                  "src": "1086:19:27"
+                  "src": "1086:19:64"
                 },
                 {
                   "eventCall": {
@@ -712,12 +712,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4829,
+                        "id": 9080,
                         "name": "_voting",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4773,
-                        "src": "1139:7:27",
+                        "referencedDeclaration": 9024,
+                        "src": "1139:7:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -731,18 +731,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4828,
+                      "id": 9079,
                       "name": "VotingTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4777,
-                      "src": "1121:17:27",
+                      "referencedDeclaration": 9028,
+                      "src": "1121:17:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4830,
+                    "id": 9081,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -750,57 +750,57 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1121:26:27",
+                    "src": "1121:26:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4831,
+                  "id": 9082,
                   "nodeType": "EmitStatement",
-                  "src": "1116:31:27"
+                  "src": "1116:31:64"
                 }
               ]
             },
             "documentation": "@dev Transfers contract to a new voting.\r\n@param recipient The address of new voting.\r",
-            "id": 4833,
+            "id": 9084,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 4814,
+                "id": 9065,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 4813,
+                  "id": 9064,
                   "name": "onlyVoting",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4801,
-                  "src": "1021:10:27",
+                  "referencedDeclaration": 9052,
+                  "src": "1021:10:64",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1021:10:27"
+                "src": "1021:10:64"
               }
             ],
             "name": "transferVotingKey",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4812,
+              "id": 9063,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4811,
+                  "id": 9062,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4833,
-                  "src": "995:17:27",
+                  "scope": 9084,
+                  "src": "995:17:64",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -808,10 +808,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4810,
+                    "id": 9061,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "995:7:27",
+                    "src": "995:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -821,40 +821,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "994:19:27"
+              "src": "994:19:64"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4815,
+              "id": 9066,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1032:0:27"
+              "src": "1032:0:64"
             },
-            "scope": 4834,
-            "src": "968:187:27",
+            "scope": 9085,
+            "src": "968:187:64",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4835,
-        "src": "168:990:27"
+        "scope": 9086,
+        "src": "168:990:64"
       }
     ],
-    "src": "0:1160:27"
+    "src": "0:1160:64"
   },
   "legacyAST": {
-    "absolutePath": "/D/tetris/SUWiserLLC_genie-truffle/contracts/utility/VotingLocked.sol",
+    "absolutePath": "/D/Projects/SUWiserLLC/truffle/contracts/utility/VotingLocked.sol",
     "exportedSymbols": {
       "VotingLocked": [
-        4834
+        9085
       ]
     },
-    "id": 4835,
+    "id": 9086,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4771,
+        "id": 9022,
         "literals": [
           "solidity",
           ">=",
@@ -865,7 +865,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:27"
+        "src": "0:32:64"
       },
       {
         "baseContracts": [],
@@ -873,20 +873,20 @@
         "contractKind": "contract",
         "documentation": "@title VotingLocked\r\n@dev A VotingLocked contract can only be used by its voting account (the one that created it)\r",
         "fullyImplemented": true,
-        "id": 4834,
+        "id": 9085,
         "linearizedBaseContracts": [
-          4834
+          9085
         ],
         "name": "VotingLocked",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4773,
+            "id": 9024,
             "name": "_voting",
             "nodeType": "VariableDeclaration",
-            "scope": 4834,
-            "src": "197:23:27",
+            "scope": 9085,
+            "src": "197:23:64",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -894,10 +894,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 4772,
+              "id": 9023,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "197:7:27",
+              "src": "197:7:64",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -909,21 +909,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 4777,
+            "id": 9028,
             "name": "VotingTransferred",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 4776,
+              "id": 9027,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4775,
+                  "id": 9026,
                   "indexed": false,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4777,
-                  "src": "263:17:27",
+                  "scope": 9028,
+                  "src": "263:17:64",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -931,10 +931,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4774,
+                    "id": 9025,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "263:7:27",
+                    "src": "263:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -944,32 +944,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "252:35:27"
+              "src": "252:35:64"
             },
-            "src": "229:59:27"
+            "src": "229:59:64"
           },
           {
             "body": {
-              "id": 4789,
+              "id": 9040,
               "nodeType": "Block",
-              "src": "430:81:27",
+              "src": "430:81:64",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4783,
+                    "id": 9034,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4780,
+                      "id": 9031,
                       "name": "_voting",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4773,
-                      "src": "441:7:27",
+                      "referencedDeclaration": 9024,
+                      "src": "441:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -981,18 +981,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 4781,
+                        "id": 9032,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5068,
-                        "src": "451:3:27",
+                        "referencedDeclaration": 9390,
+                        "src": "451:3:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 4782,
+                      "id": 9033,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1000,21 +1000,21 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "451:10:27",
+                      "src": "451:10:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "441:20:27",
+                    "src": "441:20:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 4784,
+                  "id": 9035,
                   "nodeType": "ExpressionStatement",
-                  "src": "441:20:27"
+                  "src": "441:20:64"
                 },
                 {
                   "eventCall": {
@@ -1022,12 +1022,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4786,
+                        "id": 9037,
                         "name": "_voting",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4773,
-                        "src": "495:7:27",
+                        "referencedDeclaration": 9024,
+                        "src": "495:7:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1041,18 +1041,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4785,
+                      "id": 9036,
                       "name": "VotingTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4777,
-                      "src": "477:17:27",
+                      "referencedDeclaration": 9028,
+                      "src": "477:17:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4787,
+                    "id": 9038,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1060,20 +1060,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "477:26:27",
+                    "src": "477:26:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4788,
+                  "id": 9039,
                   "nodeType": "EmitStatement",
-                  "src": "472:31:27"
+                  "src": "472:31:64"
                 }
               ]
             },
             "documentation": "@dev Sets the voting account to the one that is creating the VotingLocked contract.\r",
-            "id": 4790,
+            "id": 9041,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -1081,29 +1081,29 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4778,
+              "id": 9029,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "418:2:27"
+              "src": "418:2:64"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4779,
+              "id": 9030,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "430:0:27"
+              "src": "430:0:64"
             },
-            "scope": 4834,
-            "src": "406:105:27",
+            "scope": 9085,
+            "src": "406:105:64",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 4800,
+              "id": 9051,
               "nodeType": "Block",
-              "src": "630:61:27",
+              "src": "630:61:64",
               "statements": [
                 {
                   "expression": {
@@ -1115,7 +1115,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4796,
+                        "id": 9047,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1124,18 +1124,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 4793,
+                            "id": 9044,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 5068,
-                            "src": "649:3:27",
+                            "referencedDeclaration": 9390,
+                            "src": "649:3:64",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 4794,
+                          "id": 9045,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1143,7 +1143,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "649:10:27",
+                          "src": "649:10:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1153,18 +1153,18 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 4795,
+                          "id": 9046,
                           "name": "_voting",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4773,
-                          "src": "663:7:27",
+                          "referencedDeclaration": 9024,
+                          "src": "663:7:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "649:21:27",
+                        "src": "649:21:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1178,21 +1178,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4792,
+                      "id": 9043,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5071,
-                        5072
+                        9393,
+                        9394
                       ],
-                      "referencedDeclaration": 5071,
-                      "src": "641:7:27",
+                      "referencedDeclaration": 9393,
+                      "src": "641:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4797,
+                    "id": 9048,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1200,65 +1200,65 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "641:30:27",
+                    "src": "641:30:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4798,
+                  "id": 9049,
                   "nodeType": "ExpressionStatement",
-                  "src": "641:30:27"
+                  "src": "641:30:64"
                 },
                 {
-                  "id": 4799,
+                  "id": 9050,
                   "nodeType": "PlaceholderStatement",
-                  "src": "682:1:27"
+                  "src": "682:1:64"
                 }
               ]
             },
             "documentation": "@dev Reverts if called from any account other than the voting.\r",
-            "id": 4801,
+            "id": 9052,
             "name": "onlyVoting",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 4791,
+              "id": 9042,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "627:2:27"
+              "src": "627:2:64"
             },
-            "src": "608:83:27",
+            "src": "608:83:64",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 4808,
+              "id": 9059,
               "nodeType": "Block",
-              "src": "808:33:27",
+              "src": "808:33:64",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4806,
+                    "id": 9057,
                     "name": "_voting",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4773,
-                    "src": "826:7:27",
+                    "referencedDeclaration": 9024,
+                    "src": "826:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 4805,
-                  "id": 4807,
+                  "functionReturnParameters": 9056,
+                  "id": 9058,
                   "nodeType": "Return",
-                  "src": "819:14:27"
+                  "src": "819:14:64"
                 }
               ]
             },
             "documentation": "@return the address of the voting.\r",
-            "id": 4809,
+            "id": 9060,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1266,23 +1266,23 @@
             "name": "voting",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4802,
+              "id": 9053,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "775:2:27"
+              "src": "775:2:64"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4805,
+              "id": 9056,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4804,
+                  "id": 9055,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4809,
-                  "src": "799:7:27",
+                  "scope": 9060,
+                  "src": "799:7:64",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1290,10 +1290,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4803,
+                    "id": 9054,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "799:7:27",
+                    "src": "799:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -1303,19 +1303,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "798:9:27"
+              "src": "798:9:64"
             },
-            "scope": 4834,
-            "src": "760:81:27",
+            "scope": 9085,
+            "src": "760:81:64",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 4832,
+              "id": 9083,
               "nodeType": "Block",
-              "src": "1032:123:27",
+              "src": "1032:123:64",
               "statements": [
                 {
                   "expression": {
@@ -1327,19 +1327,19 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 4821,
+                        "id": 9072,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 4817,
+                          "id": 9068,
                           "name": "recipient",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4811,
-                          "src": "1051:9:27",
+                          "referencedDeclaration": 9062,
+                          "src": "1051:9:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1353,14 +1353,14 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 4819,
+                              "id": 9070,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "number",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "1072:1:27",
+                              "src": "1072:1:64",
                               "subdenomination": null,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_rational_0_by_1",
@@ -1376,20 +1376,20 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 4818,
+                            "id": 9069,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "1064:7:27",
+                            "src": "1064:7:64",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_address_$",
                               "typeString": "type(address)"
                             },
                             "typeName": "address"
                           },
-                          "id": 4820,
+                          "id": 9071,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1397,13 +1397,13 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1064:10:27",
+                          "src": "1064:10:64",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "1051:23:27",
+                        "src": "1051:23:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1417,21 +1417,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 4816,
+                      "id": 9067,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5071,
-                        5072
+                        9393,
+                        9394
                       ],
-                      "referencedDeclaration": 5071,
-                      "src": "1043:7:27",
+                      "referencedDeclaration": 9393,
+                      "src": "1043:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 4822,
+                    "id": 9073,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1439,32 +1439,32 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1043:32:27",
+                    "src": "1043:32:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4823,
+                  "id": 9074,
                   "nodeType": "ExpressionStatement",
-                  "src": "1043:32:27"
+                  "src": "1043:32:64"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4826,
+                    "id": 9077,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4824,
+                      "id": 9075,
                       "name": "_voting",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4773,
-                      "src": "1086:7:27",
+                      "referencedDeclaration": 9024,
+                      "src": "1086:7:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -1474,26 +1474,26 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 4825,
+                      "id": 9076,
                       "name": "recipient",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4811,
-                      "src": "1096:9:27",
+                      "referencedDeclaration": 9062,
+                      "src": "1096:9:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1086:19:27",
+                    "src": "1086:19:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 4827,
+                  "id": 9078,
                   "nodeType": "ExpressionStatement",
-                  "src": "1086:19:27"
+                  "src": "1086:19:64"
                 },
                 {
                   "eventCall": {
@@ -1501,12 +1501,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4829,
+                        "id": 9080,
                         "name": "_voting",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4773,
-                        "src": "1139:7:27",
+                        "referencedDeclaration": 9024,
+                        "src": "1139:7:64",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1520,18 +1520,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 4828,
+                      "id": 9079,
                       "name": "VotingTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4777,
-                      "src": "1121:17:27",
+                      "referencedDeclaration": 9028,
+                      "src": "1121:17:64",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 4830,
+                    "id": 9081,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1539,57 +1539,57 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1121:26:27",
+                    "src": "1121:26:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4831,
+                  "id": 9082,
                   "nodeType": "EmitStatement",
-                  "src": "1116:31:27"
+                  "src": "1116:31:64"
                 }
               ]
             },
             "documentation": "@dev Transfers contract to a new voting.\r\n@param recipient The address of new voting.\r",
-            "id": 4833,
+            "id": 9084,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 4814,
+                "id": 9065,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 4813,
+                  "id": 9064,
                   "name": "onlyVoting",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4801,
-                  "src": "1021:10:27",
+                  "referencedDeclaration": 9052,
+                  "src": "1021:10:64",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1021:10:27"
+                "src": "1021:10:64"
               }
             ],
             "name": "transferVotingKey",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4812,
+              "id": 9063,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4811,
+                  "id": 9062,
                   "name": "recipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4833,
-                  "src": "995:17:27",
+                  "scope": 9084,
+                  "src": "995:17:64",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1597,10 +1597,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4810,
+                    "id": 9061,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "995:7:27",
+                    "src": "995:7:64",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -1610,27 +1610,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "994:19:27"
+              "src": "994:19:64"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4815,
+              "id": 9066,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1032:0:27"
+              "src": "1032:0:64"
             },
-            "scope": 4834,
-            "src": "968:187:27",
+            "scope": 9085,
+            "src": "968:187:64",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4835,
-        "src": "168:990:27"
+        "scope": 9086,
+        "src": "168:990:64"
       }
     ],
-    "src": "0:1160:27"
+    "src": "0:1160:64"
   },
   "compiler": {
     "name": "solc",
@@ -1638,5 +1638,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2022-02-28T19:22:16.610Z"
+  "updatedAt": "2022-03-02T14:36:03.271Z"
 }

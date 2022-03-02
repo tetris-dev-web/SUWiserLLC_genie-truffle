@@ -15,7 +15,7 @@ contract ActiveToken is Ownable {
     votingToken = VotingToken(_votingToken);
   }
 
-  event Transfer(address indexed from, address indexed to, uint256 value);
+  event Transfer(address indexed from, address indexed to, uint256 value, , uint256 time);
 
   event Approval(address indexed owner, address indexed spender, uint256 value);
 
@@ -77,7 +77,7 @@ contract ActiveToken is Ownable {
       prepareTransfer(from, to);
       _balances[from] = _balances[from].sub(value);
       _balances[to] = _balances[to].add(value);
-      emit Transfer(from, to, value);
+      emit Transfer(from, to, value, now);
   }
 
   function _mint(address account, uint256 value) internal {
@@ -85,7 +85,7 @@ contract ActiveToken is Ownable {
 
       _totalSupply = _totalSupply.add(value);
       _balances[account] = _balances[account].add(value);
-      emit Transfer(address(0), account, value);
+      emit Transfer(address(0), account, value, now);
   }
 
   function _burn(address account, uint256 value) internal {
@@ -93,7 +93,7 @@ contract ActiveToken is Ownable {
 
       _totalSupply = _totalSupply.sub(value);
       _balances[account] = _balances[account].sub(value);
-      emit Transfer(account, address(0), value);
+      emit Transfer(account, address(0), value, now);
   }
 
   function _approve(address owner, address spender, uint256 value) internal {
